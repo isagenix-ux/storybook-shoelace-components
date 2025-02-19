@@ -24,7 +24,7 @@ const meta = {
       description: 'The button\'s variant.',
       table: {
         type: { summary: 'string' },
-        defaultValue: { summary: 'secondary' }
+        defaultValue: { summary: 'primary' }
       }
     },
     size: {
@@ -53,7 +53,7 @@ const meta = {
     }
   },
   args: {
-    variant: 'secondary',
+    variant: 'primary',
     size: 'medium',
     disabled: false,
     label: 'Button'
