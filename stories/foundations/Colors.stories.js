@@ -38,7 +38,7 @@ export const Granite = {
   render: () => html`
     <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 2rem;">
       ${ColorSwatch({ name: 'Granite 100', hex: '#F6F6F6', rgb: '246, 246, 246' })}
-      ${ColorSwatch({ name: 'Granite 200', hex: '#EDEEE', rgb: '237, 238, 238' })}
+      ${ColorSwatch({ name: 'Granite 200', hex: '#EDEEEE', rgb: '237, 238, 238' })}
       ${ColorSwatch({ name: 'Granite 500', hex: '#D4D5D5', rgb: '212, 213, 213' })}
       ${ColorSwatch({ name: 'Granite 700', hex: '#727677', rgb: '114, 118, 119' })}
       ${ColorSwatch({ name: 'Granite 800', hex: '#54585A', rgb: '84, 88, 90' })}

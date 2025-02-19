@@ -52,11 +52,16 @@ const meta = {
       }
     }
   },
-  args: {
-    variant: 'primary',
-    size: 'medium',
-    disabled: false,
-    label: 'Button'
+  parameters: {
+    docs: {
+      source: {
+        // Only show the button component code
+        transform: (code) => {
+          return code.replace(/^.*?<sl-button/m, '<sl-button')
+                    .replace(/<\/sl-button>.*$/m, '</sl-button>');
+        }
+      }
+    }
   }
 };
 
