@@ -16,7 +16,7 @@ const config = {
     { from: '../node_modules/@shoelace-style/shoelace/dist', to: '/shoelace' }
   ],
   viteFinal: async (config) => {
-    config.base = process.env.NODE_ENV === 'production' ? 'https://github.com/isagenix-ux/storybook-shoelace-components' : '/';
+    config.base = process.env.NODE_ENV === 'production' ? '/storybook-shoelace-components/' : '/';
     return config;
   }
 };
