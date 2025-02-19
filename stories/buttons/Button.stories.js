@@ -7,6 +7,7 @@ import '@shoelace-style/shoelace/dist/components/icon/icon.js';
 const meta = {
   title: 'Shoelace/Buttons/Button',
   tags: ['autodocs'],
+  component: 'sl-button',
   render: (args) => html`
     <sl-button
       variant=${args.variant}
@@ -15,7 +16,6 @@ const meta = {
       ?loading=${args.loading}
       ?pill=${args.pill}
       ?circle=${args.circle}
-      style=${args.style || ''}
     >
       ${args.prefix ? html`<sl-icon slot="prefix" name=${args.prefix}></sl-icon>` : ''}
       ${args.circle ? html`<sl-icon name=${args.icon}></sl-icon>` : args.label}
@@ -232,4 +232,17 @@ export const CustomWidth = {
       <sl-button size="large" style="width: 100%;">Large</sl-button>
     </div>
   `
+};
+
+// Basic button with args
+export const Basic = {
+  args: {
+    variant: 'primary',
+    size: 'medium',
+    label: 'Button',
+    disabled: false,
+    loading: false,
+    pill: false,
+    circle: false
+  }
 }; 
