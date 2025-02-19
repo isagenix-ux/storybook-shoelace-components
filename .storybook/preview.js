@@ -32,30 +32,22 @@ const preview = {
           --sl-font-mono: monospace;
 
           /* Primary colors */
-          --sl-color-primary-50: #F2F8F9;
-          --sl-color-primary-100: #E0EEF1;
+          --sl-color-primary-100: #F2F8F9;
+          --sl-color-primary-150: #E0EEF1;
           --sl-color-primary-200: #BFDDE2;
           --sl-color-primary-300: #4099A8;
-          --sl-color-primary-400: #1F8A9C;
           --sl-color-primary-500: #00778B;
-          --sl-color-primary-600: #00778B;
           --sl-color-primary-700: #0C5F6F;
           --sl-color-primary-800: #0C5F6F;
           --sl-color-primary-900: #003038;
-          --sl-color-primary-950: #002128;
 
           /* Neutral colors */
-          --sl-color-neutral-50: #F6F6F6;
-          --sl-color-neutral-100: #EDEEE;
+          --sl-color-neutral-100: #EDEEEE;
           --sl-color-neutral-200: #D4D5D5;
-          --sl-color-neutral-300: #B6B8B9;
-          --sl-color-neutral-400: #949697;
           --sl-color-neutral-500: #727677;
-          --sl-color-neutral-600: #54585A;
           --sl-color-neutral-700: #3F4244;
           --sl-color-neutral-800: #303030;
           --sl-color-neutral-900: #1C1D1D;
-          --sl-color-neutral-950: #0F0F0F;
         }
 
         /* Checkbox overrides */
