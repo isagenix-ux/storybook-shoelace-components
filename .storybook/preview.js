@@ -121,19 +121,25 @@ const preview = {
         }
 
         /* Button overrides */
-        sl-button::part(base) {
-          /* Primary button colors */
-          --sl-button-primary-background-color: #00778B;  /* Turquoise 500 */
-          --sl-button-primary-border-color: #00778B;      /* Turquoise 500 */
-          --sl-button-primary-hover-background-color: #0C5F6F;  /* Turquoise 700 */
-          --sl-button-primary-hover-border-color: #0C5F6F;      /* Turquoise 700 */
+        .sl-theme-light sl-button[variant='primary']::part(base) {
+          background-color: #00778B;  /* Turquoise 500 */
+          border-color: #00778B;      /* Turquoise 500 */
+        }
 
-          /* Secondary button colors */
-          --sl-button-default-background-color: transparent;
-          --sl-button-default-border-color: var(--sl-color-neutral-300);
-          --sl-button-default-hover-background-color: #F6F6F6;  /* Granite 100 */
-          --sl-button-default-hover-border-color: var(--sl-color-neutral-300);  /* Keep original border */
-          --sl-button-default-hover-color: inherit;  /* Keep original text color */
+        .sl-theme-light sl-button[variant='primary']:not([disabled])::part(base):hover {
+          background-color: #0C5F6F;  /* Turquoise 700 */
+          border-color: #0C5F6F;      /* Turquoise 700 */
+        }
+
+        .sl-theme-light sl-button[variant='secondary']::part(base) {
+          background-color: transparent;
+          border-color: var(--sl-color-neutral-300);
+        }
+
+        .sl-theme-light sl-button[variant='secondary']:not([disabled])::part(base):hover {
+          background-color: #F6F6F6;  /* Granite 100 */
+          border-color: var(--sl-color-neutral-300);
+          color: inherit;
         }
       </style>
       <div class="sl-theme-light story-wrapper">
