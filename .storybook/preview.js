@@ -131,15 +131,17 @@ const preview = {
           border-color: #0C5F6F;      /* Turquoise 700 */
         }
 
+        /* Secondary button - no background, only border */
         .sl-theme-light sl-button[variant='secondary']::part(base) {
-          background-color: transparent;
+          background-color: #FFFFFF;  /* White background */
           border-color: var(--sl-color-neutral-300);
         }
 
+        /* Secondary button hover - Granite 100 background */
         .sl-theme-light sl-button[variant='secondary']:not([disabled])::part(base):hover {
           background-color: #F6F6F6;  /* Granite 100 */
-          border-color: var(--sl-color-neutral-300);
-          color: inherit;
+          border-color: var(--sl-color-neutral-300);  /* Keep original border */
+          color: var(--sl-color-neutral-700);  /* Keep original text color */
         }
       </style>
       <div class="sl-theme-light story-wrapper">
