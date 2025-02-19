@@ -146,13 +146,13 @@ const preview = {
 
         /* Text button styles */
         .sl-theme-light sl-button[variant='text']::part(base) {
-          color: #00778B;  /* Turquoise 500 */
-          border: none;
-          background: none;
+          background-color: transparent;
+          border-color: transparent;
+          color: var(--sl-color-primary-500);  /* Using Turquoise 500 via CSS variable */
         }
 
         .sl-theme-light sl-button[variant='text']:not([disabled])::part(base):hover {
-          color: #0C5F6F;  /* Turquoise 700 */
+          color: var(--sl-color-primary-700);  /* Using Turquoise 700 via CSS variable */
           background: none;
         }
       </style>
