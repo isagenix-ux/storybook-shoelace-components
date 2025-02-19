@@ -41,7 +41,14 @@ const meta = {
         defaultValue: { summary: 'medium' }
       }
     },
-    disabled: { control: 'boolean' },
+    disabled: { 
+      control: 'boolean',
+      description: 'Makes the button disabled.',
+      table: {
+        type: { summary: 'boolean' },
+        defaultValue: { summary: false }
+      }
+    },
     loading: { 
       control: 'boolean',
       description: 'Shows a loading spinner.',
@@ -50,13 +57,59 @@ const meta = {
         defaultValue: { summary: false }
       }
     },
-    pill: { control: 'boolean' },
-    circle: { control: 'boolean' },
-    prefix: { control: 'text' },
-    suffix: { control: 'text' },
-    icon: { control: 'text' },
-    label: { control: 'text' },
-    style: { control: 'text' }
+    pill: { 
+      control: 'boolean',
+      description: 'Makes the button pill-shaped.',
+      table: {
+        type: { summary: 'boolean' },
+        defaultValue: { summary: false }
+      }
+    },
+    circle: { 
+      control: 'boolean',
+      description: 'Makes the button circular.',
+      table: {
+        type: { summary: 'boolean' },
+        defaultValue: { summary: false }
+      }
+    },
+    label: { 
+      control: 'text',
+      description: 'The button\'s label.',
+      table: {
+        type: { summary: 'string' }
+      }
+    },
+    prefix: { 
+      control: 'text',
+      description: 'Icon to show before the label.',
+      table: {
+        type: { summary: 'string' }
+      }
+    },
+    suffix: { 
+      control: 'text',
+      description: 'Icon to show after the label.',
+      table: {
+        type: { summary: 'string' }
+      }
+    },
+    icon: { 
+      control: 'text',
+      description: 'Icon to show in circle buttons.',
+      table: {
+        type: { summary: 'string' }
+      }
+    }
+  },
+  args: {
+    variant: 'default',
+    size: 'medium',
+    disabled: false,
+    loading: false,
+    pill: false,
+    circle: false,
+    label: 'Button'
   },
   parameters: {
     docs: {
