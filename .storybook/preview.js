@@ -122,12 +122,18 @@ const preview = {
 
         /* Button overrides */
         sl-button::part(base) {
-          --sl-button-primary-background-color: #00778B;
-          --sl-button-primary-border-color: #00778B;
-          --sl-button-primary-hover-background-color: #0C5F6F;
-          --sl-button-primary-hover-border-color: #0C5F6F;
-          --sl-button-primary-active-background-color: #0C5F6F;
-          --sl-button-primary-active-border-color: #0C5F6F;
+          /* Primary button colors */
+          --sl-button-primary-background-color: #00778B;  /* Turquoise 500 */
+          --sl-button-primary-border-color: #00778B;      /* Turquoise 500 */
+          --sl-button-primary-hover-background-color: #0C5F6F;  /* Turquoise 700 */
+          --sl-button-primary-hover-border-color: #0C5F6F;      /* Turquoise 700 */
+          --sl-button-primary-active-background-color: #0C5F6F;  /* Turquoise 700 */
+          --sl-button-primary-active-border-color: #0C5F6F;      /* Turquoise 700 */
+
+          /* Secondary button colors */
+          --sl-button-default-hover-background-color: #F6F6F6;  /* Granite 100 */
+          --sl-button-default-hover-border-color: var(--sl-color-neutral-300);  /* Keep original border */
+          --sl-button-default-hover-color: inherit;  /* Keep original text color */
         }
       </style>
       <div class="sl-theme-light story-wrapper">

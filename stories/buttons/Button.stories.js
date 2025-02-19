@@ -20,11 +20,11 @@ const meta = {
   argTypes: {
     variant: {
       control: 'select',
-      options: ['primary', 'default', 'text'],
+      options: ['primary', 'secondary', 'text'],
       description: 'The button\'s variant.',
       table: {
         type: { summary: 'string' },
-        defaultValue: { summary: 'default' }
+        defaultValue: { summary: 'secondary' }
       }
     },
     size: {
@@ -53,7 +53,7 @@ const meta = {
     }
   },
   args: {
-    variant: 'default',
+    variant: 'secondary',
     size: 'medium',
     disabled: false,
     label: 'Button'
@@ -77,7 +77,7 @@ export const Variants = {
   render: () => html`
     <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
       <sl-button variant="primary">Primary</sl-button>
-      <sl-button variant="default">Secondary</sl-button>
+      <sl-button variant="secondary">Secondary</sl-button>
       <sl-button variant="text">Text</sl-button>
     </div>
   `
@@ -99,7 +99,7 @@ export const Disabled = {
   render: () => html`
     <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
       <sl-button variant="primary" disabled>Primary</sl-button>
-      <sl-button variant="default" disabled>Secondary</sl-button>
+      <sl-button variant="secondary" disabled>Secondary</sl-button>
       <sl-button variant="text" disabled>Text</sl-button>
     </div>
   `
