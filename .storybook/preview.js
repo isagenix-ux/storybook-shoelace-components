@@ -143,6 +143,18 @@ const preview = {
           border-color: var(--sl-color-neutral-300);  /* Keep original border */
           color: var(--sl-color-neutral-700);  /* Keep original text color */
         }
+
+        /* Text button styles */
+        .sl-theme-light sl-button[variant='text']::part(base) {
+          color: #00778B;  /* Turquoise 500 */
+          border: none;
+          background: none;
+        }
+
+        .sl-theme-light sl-button[variant='text']:not([disabled])::part(base):hover {
+          color: #0C5F6F;  /* Turquoise 700 */
+          background: none;
+        }
       </style>
       <div class="sl-theme-light story-wrapper">
         ${story()}
