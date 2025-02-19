@@ -113,6 +113,7 @@ const preview = {
         }
 
         /* Button overrides */
+        /* Primary button */
         .sl-theme-light sl-button[variant='primary']::part(base) {
           background-color: #00778B;  /* Turquoise 500 */
           border-color: #00778B;      /* Turquoise 500 */
@@ -123,29 +124,36 @@ const preview = {
           border-color: #0C5F6F;      /* Turquoise 700 */
         }
 
-        /* Secondary button - no background, only border */
+        /* Secondary button */
         .sl-theme-light sl-button[variant='secondary']::part(base) {
           background-color: #FFFFFF;  /* White background */
           border-color: var(--sl-color-neutral-300);
         }
 
-        /* Secondary button hover - Granite 100 background */
         .sl-theme-light sl-button[variant='secondary']:not([disabled])::part(base):hover {
           background-color: #F6F6F6;  /* Granite 100 */
-          border-color: var(--sl-color-neutral-300);  /* Keep original border */
-          color: var(--sl-color-neutral-700);  /* Keep original text color */
+          border-color: var(--sl-color-neutral-300);
+          color: var(--sl-color-neutral-700);
         }
 
-        /* Text button styles */
+        /* Text button */
         .sl-theme-light sl-button[variant='text']::part(base) {
           background-color: transparent;
           border-color: transparent;
-          color: var(--sl-color-primary-500);  /* Using Turquoise 500 via CSS variable */
+          color: #00778B;  /* Turquoise 500 */
         }
 
         .sl-theme-light sl-button[variant='text']:not([disabled])::part(base):hover {
-          color: var(--sl-color-primary-700);  /* Using Turquoise 700 via CSS variable */
+          color: #0C5F6F;  /* Turquoise 700 */
           background: none;
+        }
+
+        /* Disabled state for all buttons */
+        .sl-theme-light sl-button[disabled]::part(base) {
+          background-color: #727677 !important;  /* Granite 500 */
+          border-color: #727677 !important;      /* Granite 500 */
+          color: #FFFFFF !important;             /* White text */
+          opacity: 1;                            /* Override default opacity */
         }
       </style>
       <div class="sl-theme-light story-wrapper">
