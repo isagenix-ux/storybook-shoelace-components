@@ -1,6 +1,7 @@
 import { html } from 'lit';
 import { setBasePath } from '@shoelace-style/shoelace/dist/utilities/base-path';
 import { library } from '@fortawesome/fontawesome-svg-core';
+import { config } from '@fortawesome/fontawesome-svg-core';
 import { 
   falCircleInfo, 
   falCircleCheck, 
@@ -14,6 +15,9 @@ import '@shoelace-style/shoelace/dist/themes/light.css';
 
 // Set the base path for Shoelace assets
 setBasePath('/shoelace');
+
+// Configure Font Awesome
+config.autoAddCss = false;  // Prevent Font Awesome from automatically injecting CSS
 
 // Add icons to the library
 library.add(
