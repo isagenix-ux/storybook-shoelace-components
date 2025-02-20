@@ -7,15 +7,15 @@ import '@shoelace-style/shoelace/dist/components/icon/icon.js';
 function getIconForVariant(variant) {
   switch (variant) {
     case 'primary':
-      return 'circle-info';
+      return 'fal fa-circle-info';
     case 'success':
-      return 'circle-check';
+      return 'fal fa-circle-check';
     case 'warning':
-      return 'circle-exclamation';
+      return 'fal fa-circle-exclamation';
     case 'danger':
-      return 'triangle-exclamation';
+      return 'fal fa-triangle-exclamation';
     default:
-      return 'circle-info';
+      return 'fal fa-circle-info';
   }
 }
 
@@ -37,7 +37,7 @@ const meta = {
     if (args.icon) {
       const icon = document.createElement('sl-icon');
       icon.slot = 'icon';
-      icon.library = 'fa-light';
+      icon.library = 'fa';
       icon.name = getIconForVariant(args.variant);
       alert.appendChild(icon);
     }

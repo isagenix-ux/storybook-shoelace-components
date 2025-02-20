@@ -1,7 +1,8 @@
 import { html } from 'lit';
 import { setBasePath } from '@shoelace-style/shoelace/dist/utilities/base-path';
-import { library } from '@fortawesome/fontawesome-svg-core';
+import { dom, library } from '@fortawesome/fontawesome-svg-core';
 import { config } from '@fortawesome/fontawesome-svg-core';
+import '@fortawesome/fontawesome-svg-core/styles.css';
 import { 
   falCircleInfo, 
   falCircleCheck, 
@@ -17,16 +18,19 @@ import '@shoelace-style/shoelace/dist/themes/light.css';
 setBasePath('/shoelace');
 
 // Configure Font Awesome
-config.autoAddCss = false;  // Prevent Font Awesome from automatically injecting CSS
+config.autoAddCss = false;
 
 // Add icons to the library
-library.add(
-  falCircleInfo,
-  falCircleCheck,
-  falCircleExclamation,
+library.add({
+  falCircleInfo, 
+  falCircleCheck, 
+  falCircleExclamation, 
   falTriangleExclamation,
   falXmark
-);
+});
+
+// Initialize Font Awesome DOM watching
+dom.watch();
 
 /** @type { import('@storybook/web-components').Preview } */
 const preview = {
