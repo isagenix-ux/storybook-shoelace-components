@@ -1,4 +1,4 @@
-/*! For license information please see data-display-Card-stories.a8878615.iframe.bundle.js.LICENSE.txt */
+/*! For license information please see data-display-Card-stories.b04b5537.iframe.bundle.js.LICENSE.txt */
 "use strict";(self.webpackChunkshoelace_storybook=self.webpackChunkshoelace_storybook||[]).push([[421],{"./node_modules/@shoelace-style/shoelace/dist/chunks/chunk.6I2T3DLI.js":(__unused_webpack_module,__webpack_exports__,__webpack_require__)=>{__webpack_require__.d(__webpack_exports__,{Y:()=>icon_button_styles_default});var icon_button_styles_default=__webpack_require__("./node_modules/lit/index.js").AH`
   :host {
     display: inline-block;
@@ -72,82 +72,7 @@
           aria-hidden="true"
         ></sl-icon>
       </${tag}>
-    `}};SlIconButton.styles=[_chunk_TUVJKY7S_js__WEBPACK_IMPORTED_MODULE_2__.$,_chunk_6I2T3DLI_js__WEBPACK_IMPORTED_MODULE_0__.Y],SlIconButton.dependencies={"sl-icon":_chunk_4GJTAPTW_js__WEBPACK_IMPORTED_MODULE_1__.B},(0,_chunk_KAW7D32O_js__WEBPACK_IMPORTED_MODULE_4__.Cc)([(0,lit_decorators_js__WEBPACK_IMPORTED_MODULE_8__.P)(".icon-button")],SlIconButton.prototype,"button",2),(0,_chunk_KAW7D32O_js__WEBPACK_IMPORTED_MODULE_4__.Cc)([(0,lit_decorators_js__WEBPACK_IMPORTED_MODULE_8__.wk)()],SlIconButton.prototype,"hasFocus",2),(0,_chunk_KAW7D32O_js__WEBPACK_IMPORTED_MODULE_4__.Cc)([(0,lit_decorators_js__WEBPACK_IMPORTED_MODULE_8__.MZ)()],SlIconButton.prototype,"name",2),(0,_chunk_KAW7D32O_js__WEBPACK_IMPORTED_MODULE_4__.Cc)([(0,lit_decorators_js__WEBPACK_IMPORTED_MODULE_8__.MZ)()],SlIconButton.prototype,"library",2),(0,_chunk_KAW7D32O_js__WEBPACK_IMPORTED_MODULE_4__.Cc)([(0,lit_decorators_js__WEBPACK_IMPORTED_MODULE_8__.MZ)()],SlIconButton.prototype,"src",2),(0,_chunk_KAW7D32O_js__WEBPACK_IMPORTED_MODULE_4__.Cc)([(0,lit_decorators_js__WEBPACK_IMPORTED_MODULE_8__.MZ)()],SlIconButton.prototype,"href",2),(0,_chunk_KAW7D32O_js__WEBPACK_IMPORTED_MODULE_4__.Cc)([(0,lit_decorators_js__WEBPACK_IMPORTED_MODULE_8__.MZ)()],SlIconButton.prototype,"target",2),(0,_chunk_KAW7D32O_js__WEBPACK_IMPORTED_MODULE_4__.Cc)([(0,lit_decorators_js__WEBPACK_IMPORTED_MODULE_8__.MZ)()],SlIconButton.prototype,"download",2),(0,_chunk_KAW7D32O_js__WEBPACK_IMPORTED_MODULE_4__.Cc)([(0,lit_decorators_js__WEBPACK_IMPORTED_MODULE_8__.MZ)()],SlIconButton.prototype,"label",2),(0,_chunk_KAW7D32O_js__WEBPACK_IMPORTED_MODULE_4__.Cc)([(0,lit_decorators_js__WEBPACK_IMPORTED_MODULE_8__.MZ)({type:Boolean,reflect:!0})],SlIconButton.prototype,"disabled",2)},"./node_modules/@shoelace-style/shoelace/dist/components/card/card.js":(__unused_webpack_module,__unused_webpack___webpack_exports__,__webpack_require__)=>{var lit=__webpack_require__("./node_modules/lit/index.js"),card_styles_default=lit.AH`
-  :host {
-    --border-color: var(--sl-color-neutral-200);
-    --border-radius: var(--sl-border-radius-medium);
-    --border-width: 1px;
-    --padding: var(--sl-spacing-large);
-
-    display: inline-block;
-  }
-
-  .card {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--sl-panel-background-color);
-    box-shadow: var(--sl-shadow-x-small);
-    border: solid var(--border-width) var(--border-color);
-    border-radius: var(--border-radius);
-  }
-
-  .card__image {
-    display: flex;
-    border-top-left-radius: var(--border-radius);
-    border-top-right-radius: var(--border-radius);
-    margin: calc(-1 * var(--border-width));
-    overflow: hidden;
-  }
-
-  .card__image::slotted(img) {
-    display: block;
-    width: 100%;
-  }
-
-  .card:not(.card--has-image) .card__image {
-    display: none;
-  }
-
-  .card__header {
-    display: block;
-    border-bottom: solid var(--border-width) var(--border-color);
-    padding: calc(var(--padding) / 2) var(--padding);
-  }
-
-  .card:not(.card--has-header) .card__header {
-    display: none;
-  }
-
-  .card:not(.card--has-image) .card__header {
-    border-top-left-radius: var(--border-radius);
-    border-top-right-radius: var(--border-radius);
-  }
-
-  .card__body {
-    display: block;
-    padding: var(--padding);
-  }
-
-  .card--has-footer .card__footer {
-    display: block;
-    border-top: solid var(--border-width) var(--border-color);
-    padding: var(--padding);
-  }
-
-  .card:not(.card--has-footer) .card__footer {
-    display: none;
-  }
-`,chunk_NYIIDP5N=__webpack_require__("./node_modules/@shoelace-style/shoelace/dist/chunks/chunk.NYIIDP5N.js"),chunk_TUVJKY7S=__webpack_require__("./node_modules/@shoelace-style/shoelace/dist/chunks/chunk.TUVJKY7S.js"),chunk_PFOQ5QRR=__webpack_require__("./node_modules/@shoelace-style/shoelace/dist/chunks/chunk.PFOQ5QRR.js"),class_map=__webpack_require__("./node_modules/lit/directives/class-map.js"),chunk_YUOHZV33_SlCard=class extends chunk_PFOQ5QRR.f{constructor(){super(...arguments),this.hasSlotController=new chunk_NYIIDP5N.X(this,"footer","header","image")}render(){return lit.qy`
-      <div
-        part="base"
-        class=${(0,class_map.H)({card:!0,"card--has-footer":this.hasSlotController.test("footer"),"card--has-image":this.hasSlotController.test("image"),"card--has-header":this.hasSlotController.test("header")})}
-      >
-        <slot name="image" part="image" class="card__image"></slot>
-        <slot name="header" part="header" class="card__header"></slot>
-        <slot part="body" class="card__body"></slot>
-        <slot name="footer" part="footer" class="card__footer"></slot>
-      </div>
-    `}};chunk_YUOHZV33_SlCard.styles=[chunk_TUVJKY7S.$,card_styles_default];chunk_YUOHZV33_SlCard.define("sl-card");__webpack_require__("./node_modules/@shoelace-style/shoelace/dist/chunks/chunk.KAW7D32O.js")},"./node_modules/@shoelace-style/shoelace/dist/components/icon-button/icon-button.js":(__unused_webpack_module,__unused_webpack___webpack_exports__,__webpack_require__)=>{__webpack_require__("./node_modules/@shoelace-style/shoelace/dist/chunks/chunk.HLJ2JR6P.js").h.define("sl-icon-button");__webpack_require__("./node_modules/@shoelace-style/shoelace/dist/chunks/chunk.6I2T3DLI.js"),__webpack_require__("./node_modules/@shoelace-style/shoelace/dist/chunks/chunk.4GJTAPTW.js"),__webpack_require__("./node_modules/@shoelace-style/shoelace/dist/chunks/chunk.ZL53POKZ.js"),__webpack_require__("./node_modules/@shoelace-style/shoelace/dist/chunks/chunk.P7ZG6EMR.js"),__webpack_require__("./node_modules/@shoelace-style/shoelace/dist/chunks/chunk.3TFKS637.js"),__webpack_require__("./node_modules/@shoelace-style/shoelace/dist/chunks/chunk.QLXRCYS4.js"),__webpack_require__("./node_modules/@shoelace-style/shoelace/dist/chunks/chunk.GMYPQTFK.js"),__webpack_require__("./node_modules/@shoelace-style/shoelace/dist/chunks/chunk.TUVJKY7S.js"),__webpack_require__("./node_modules/@shoelace-style/shoelace/dist/chunks/chunk.PFOQ5QRR.js"),__webpack_require__("./node_modules/@shoelace-style/shoelace/dist/chunks/chunk.KAW7D32O.js")},"./node_modules/@shoelace-style/shoelace/dist/components/rating/rating.js":(__unused_webpack_module,__unused_webpack___webpack_exports__,__webpack_require__)=>{var lit=__webpack_require__("./node_modules/lit/index.js"),rating_styles_default=lit.AH`
+    `}};SlIconButton.styles=[_chunk_TUVJKY7S_js__WEBPACK_IMPORTED_MODULE_2__.$,_chunk_6I2T3DLI_js__WEBPACK_IMPORTED_MODULE_0__.Y],SlIconButton.dependencies={"sl-icon":_chunk_4GJTAPTW_js__WEBPACK_IMPORTED_MODULE_1__.B},(0,_chunk_KAW7D32O_js__WEBPACK_IMPORTED_MODULE_4__.Cc)([(0,lit_decorators_js__WEBPACK_IMPORTED_MODULE_8__.P)(".icon-button")],SlIconButton.prototype,"button",2),(0,_chunk_KAW7D32O_js__WEBPACK_IMPORTED_MODULE_4__.Cc)([(0,lit_decorators_js__WEBPACK_IMPORTED_MODULE_8__.wk)()],SlIconButton.prototype,"hasFocus",2),(0,_chunk_KAW7D32O_js__WEBPACK_IMPORTED_MODULE_4__.Cc)([(0,lit_decorators_js__WEBPACK_IMPORTED_MODULE_8__.MZ)()],SlIconButton.prototype,"name",2),(0,_chunk_KAW7D32O_js__WEBPACK_IMPORTED_MODULE_4__.Cc)([(0,lit_decorators_js__WEBPACK_IMPORTED_MODULE_8__.MZ)()],SlIconButton.prototype,"library",2),(0,_chunk_KAW7D32O_js__WEBPACK_IMPORTED_MODULE_4__.Cc)([(0,lit_decorators_js__WEBPACK_IMPORTED_MODULE_8__.MZ)()],SlIconButton.prototype,"src",2),(0,_chunk_KAW7D32O_js__WEBPACK_IMPORTED_MODULE_4__.Cc)([(0,lit_decorators_js__WEBPACK_IMPORTED_MODULE_8__.MZ)()],SlIconButton.prototype,"href",2),(0,_chunk_KAW7D32O_js__WEBPACK_IMPORTED_MODULE_4__.Cc)([(0,lit_decorators_js__WEBPACK_IMPORTED_MODULE_8__.MZ)()],SlIconButton.prototype,"target",2),(0,_chunk_KAW7D32O_js__WEBPACK_IMPORTED_MODULE_4__.Cc)([(0,lit_decorators_js__WEBPACK_IMPORTED_MODULE_8__.MZ)()],SlIconButton.prototype,"download",2),(0,_chunk_KAW7D32O_js__WEBPACK_IMPORTED_MODULE_4__.Cc)([(0,lit_decorators_js__WEBPACK_IMPORTED_MODULE_8__.MZ)()],SlIconButton.prototype,"label",2),(0,_chunk_KAW7D32O_js__WEBPACK_IMPORTED_MODULE_4__.Cc)([(0,lit_decorators_js__WEBPACK_IMPORTED_MODULE_8__.MZ)({type:Boolean,reflect:!0})],SlIconButton.prototype,"disabled",2)},"./node_modules/@shoelace-style/shoelace/dist/components/icon-button/icon-button.js":(__unused_webpack_module,__unused_webpack___webpack_exports__,__webpack_require__)=>{__webpack_require__("./node_modules/@shoelace-style/shoelace/dist/chunks/chunk.HLJ2JR6P.js").h.define("sl-icon-button");__webpack_require__("./node_modules/@shoelace-style/shoelace/dist/chunks/chunk.6I2T3DLI.js"),__webpack_require__("./node_modules/@shoelace-style/shoelace/dist/chunks/chunk.4GJTAPTW.js"),__webpack_require__("./node_modules/@shoelace-style/shoelace/dist/chunks/chunk.ZL53POKZ.js"),__webpack_require__("./node_modules/@shoelace-style/shoelace/dist/chunks/chunk.P7ZG6EMR.js"),__webpack_require__("./node_modules/@shoelace-style/shoelace/dist/chunks/chunk.3TFKS637.js"),__webpack_require__("./node_modules/@shoelace-style/shoelace/dist/chunks/chunk.QLXRCYS4.js"),__webpack_require__("./node_modules/@shoelace-style/shoelace/dist/chunks/chunk.GMYPQTFK.js"),__webpack_require__("./node_modules/@shoelace-style/shoelace/dist/chunks/chunk.TUVJKY7S.js"),__webpack_require__("./node_modules/@shoelace-style/shoelace/dist/chunks/chunk.PFOQ5QRR.js"),__webpack_require__("./node_modules/@shoelace-style/shoelace/dist/chunks/chunk.KAW7D32O.js")},"./node_modules/@shoelace-style/shoelace/dist/components/rating/rating.js":(__unused_webpack_module,__unused_webpack___webpack_exports__,__webpack_require__)=>{var lit=__webpack_require__("./node_modules/lit/index.js"),rating_styles_default=lit.AH`
   :host {
     --symbol-color: var(--sl-color-neutral-300);
     --symbol-color-active: var(--sl-color-amber-500);
@@ -284,12 +209,87 @@
             `))}
         </span>
       </div>
-    `}};chunk_SEJYSI7P_SlRating.styles=[chunk_TUVJKY7S.$,rating_styles_default],chunk_SEJYSI7P_SlRating.dependencies={"sl-icon":chunk_4GJTAPTW.B},(0,chunk_KAW7D32O.Cc)([(0,decorators.P)(".rating")],chunk_SEJYSI7P_SlRating.prototype,"rating",2),(0,chunk_KAW7D32O.Cc)([(0,decorators.wk)()],chunk_SEJYSI7P_SlRating.prototype,"hoverValue",2),(0,chunk_KAW7D32O.Cc)([(0,decorators.wk)()],chunk_SEJYSI7P_SlRating.prototype,"isHovering",2),(0,chunk_KAW7D32O.Cc)([(0,decorators.MZ)()],chunk_SEJYSI7P_SlRating.prototype,"label",2),(0,chunk_KAW7D32O.Cc)([(0,decorators.MZ)({type:Number})],chunk_SEJYSI7P_SlRating.prototype,"value",2),(0,chunk_KAW7D32O.Cc)([(0,decorators.MZ)({type:Number})],chunk_SEJYSI7P_SlRating.prototype,"max",2),(0,chunk_KAW7D32O.Cc)([(0,decorators.MZ)({type:Number})],chunk_SEJYSI7P_SlRating.prototype,"precision",2),(0,chunk_KAW7D32O.Cc)([(0,decorators.MZ)({type:Boolean,reflect:!0})],chunk_SEJYSI7P_SlRating.prototype,"readonly",2),(0,chunk_KAW7D32O.Cc)([(0,decorators.MZ)({type:Boolean,reflect:!0})],chunk_SEJYSI7P_SlRating.prototype,"disabled",2),(0,chunk_KAW7D32O.Cc)([(0,decorators.MZ)()],chunk_SEJYSI7P_SlRating.prototype,"getSymbol",2),(0,chunk_KAW7D32O.Cc)([(0,decorators.Ls)({passive:!0})],chunk_SEJYSI7P_SlRating.prototype,"handleTouchMove",1),(0,chunk_KAW7D32O.Cc)([(0,chunk_GMYPQTFK.w)("hoverValue")],chunk_SEJYSI7P_SlRating.prototype,"handleHoverValueChange",1),(0,chunk_KAW7D32O.Cc)([(0,chunk_GMYPQTFK.w)("isHovering")],chunk_SEJYSI7P_SlRating.prototype,"handleIsHoveringChange",1);chunk_SEJYSI7P_SlRating.define("sl-rating");__webpack_require__("./node_modules/@shoelace-style/shoelace/dist/chunks/chunk.7BTDLTNI.js"),__webpack_require__("./node_modules/@shoelace-style/shoelace/dist/chunks/chunk.ZL53POKZ.js"),__webpack_require__("./node_modules/@shoelace-style/shoelace/dist/chunks/chunk.P7ZG6EMR.js"),__webpack_require__("./node_modules/@shoelace-style/shoelace/dist/chunks/chunk.3TFKS637.js"),__webpack_require__("./node_modules/@shoelace-style/shoelace/dist/chunks/chunk.QLXRCYS4.js")},"./node_modules/lit/directives/style-map.js":(__unused_webpack_module,__webpack_exports__,__webpack_require__)=>{__webpack_require__.d(__webpack_exports__,{W:()=>o});var lit_html=__webpack_require__("./node_modules/lit-html/lit-html.js"),directive=__webpack_require__("./node_modules/lit-html/directive.js");const n="important",i=" !"+n,o=(0,directive.u$)(class extends directive.WL{constructor(t){if(super(t),t.type!==directive.OA.ATTRIBUTE||"style"!==t.name||t.strings?.length>2)throw Error("The `styleMap` directive must be used in the `style` attribute and must be the only part in the attribute.")}render(t){return Object.keys(t).reduce(((e,r)=>{const s=t[r];return null==s?e:e+`${r=r.includes("-")?r:r.replace(/(?:^(webkit|moz|ms|o)|)(?=[A-Z])/g,"-$&").toLowerCase()}:${s};`}),"")}update(e,[r]){const{style:s}=e.element;if(void 0===this.ft)return this.ft=new Set(Object.keys(r)),this.render(r);for(const t of this.ft)null==r[t]&&(this.ft.delete(t),t.includes("-")?s.removeProperty(t):s[t]=null);for(const t in r){const e=r[t];if(null!=e){this.ft.add(t);const r="string"==typeof e&&e.endsWith(i);t.includes("-")||r?s.setProperty(t,r?e.slice(0,-11):e,r?n:""):s[t]=e}}return lit_html.c0}})},"./stories/data-display/Card.stories.js":(__unused_webpack_module,__webpack_exports__,__webpack_require__)=>{__webpack_require__.r(__webpack_exports__),__webpack_require__.d(__webpack_exports__,{Basic:()=>Basic,Complex:()=>Complex,WithFooter:()=>WithFooter,WithHeader:()=>WithHeader,WithImage:()=>WithImage,__namedExportsOrder:()=>__namedExportsOrder,default:()=>__WEBPACK_DEFAULT_EXPORT__});var lit__WEBPACK_IMPORTED_MODULE_0__=__webpack_require__("./node_modules/lit/index.js");__webpack_require__("./node_modules/@shoelace-style/shoelace/dist/components/card/card.js"),__webpack_require__("./node_modules/@shoelace-style/shoelace/dist/components/button/button.js"),__webpack_require__("./node_modules/@shoelace-style/shoelace/dist/components/icon-button/icon-button.js"),__webpack_require__("./node_modules/@shoelace-style/shoelace/dist/components/rating/rating.js");const __WEBPACK_DEFAULT_EXPORT__={title:"Shoelace/Data Display/Card",tags:["autodocs"],render:args=>lit__WEBPACK_IMPORTED_MODULE_0__.qy`
+    `}};chunk_SEJYSI7P_SlRating.styles=[chunk_TUVJKY7S.$,rating_styles_default],chunk_SEJYSI7P_SlRating.dependencies={"sl-icon":chunk_4GJTAPTW.B},(0,chunk_KAW7D32O.Cc)([(0,decorators.P)(".rating")],chunk_SEJYSI7P_SlRating.prototype,"rating",2),(0,chunk_KAW7D32O.Cc)([(0,decorators.wk)()],chunk_SEJYSI7P_SlRating.prototype,"hoverValue",2),(0,chunk_KAW7D32O.Cc)([(0,decorators.wk)()],chunk_SEJYSI7P_SlRating.prototype,"isHovering",2),(0,chunk_KAW7D32O.Cc)([(0,decorators.MZ)()],chunk_SEJYSI7P_SlRating.prototype,"label",2),(0,chunk_KAW7D32O.Cc)([(0,decorators.MZ)({type:Number})],chunk_SEJYSI7P_SlRating.prototype,"value",2),(0,chunk_KAW7D32O.Cc)([(0,decorators.MZ)({type:Number})],chunk_SEJYSI7P_SlRating.prototype,"max",2),(0,chunk_KAW7D32O.Cc)([(0,decorators.MZ)({type:Number})],chunk_SEJYSI7P_SlRating.prototype,"precision",2),(0,chunk_KAW7D32O.Cc)([(0,decorators.MZ)({type:Boolean,reflect:!0})],chunk_SEJYSI7P_SlRating.prototype,"readonly",2),(0,chunk_KAW7D32O.Cc)([(0,decorators.MZ)({type:Boolean,reflect:!0})],chunk_SEJYSI7P_SlRating.prototype,"disabled",2),(0,chunk_KAW7D32O.Cc)([(0,decorators.MZ)()],chunk_SEJYSI7P_SlRating.prototype,"getSymbol",2),(0,chunk_KAW7D32O.Cc)([(0,decorators.Ls)({passive:!0})],chunk_SEJYSI7P_SlRating.prototype,"handleTouchMove",1),(0,chunk_KAW7D32O.Cc)([(0,chunk_GMYPQTFK.w)("hoverValue")],chunk_SEJYSI7P_SlRating.prototype,"handleHoverValueChange",1),(0,chunk_KAW7D32O.Cc)([(0,chunk_GMYPQTFK.w)("isHovering")],chunk_SEJYSI7P_SlRating.prototype,"handleIsHoveringChange",1);chunk_SEJYSI7P_SlRating.define("sl-rating");__webpack_require__("./node_modules/@shoelace-style/shoelace/dist/chunks/chunk.7BTDLTNI.js"),__webpack_require__("./node_modules/@shoelace-style/shoelace/dist/chunks/chunk.ZL53POKZ.js"),__webpack_require__("./node_modules/@shoelace-style/shoelace/dist/chunks/chunk.P7ZG6EMR.js"),__webpack_require__("./node_modules/@shoelace-style/shoelace/dist/chunks/chunk.3TFKS637.js"),__webpack_require__("./node_modules/@shoelace-style/shoelace/dist/chunks/chunk.QLXRCYS4.js")},"./node_modules/lit/directives/style-map.js":(__unused_webpack_module,__webpack_exports__,__webpack_require__)=>{__webpack_require__.d(__webpack_exports__,{W:()=>o});var lit_html=__webpack_require__("./node_modules/lit-html/lit-html.js"),directive=__webpack_require__("./node_modules/lit-html/directive.js");const n="important",i=" !"+n,o=(0,directive.u$)(class extends directive.WL{constructor(t){if(super(t),t.type!==directive.OA.ATTRIBUTE||"style"!==t.name||t.strings?.length>2)throw Error("The `styleMap` directive must be used in the `style` attribute and must be the only part in the attribute.")}render(t){return Object.keys(t).reduce(((e,r)=>{const s=t[r];return null==s?e:e+`${r=r.includes("-")?r:r.replace(/(?:^(webkit|moz|ms|o)|)(?=[A-Z])/g,"-$&").toLowerCase()}:${s};`}),"")}update(e,[r]){const{style:s}=e.element;if(void 0===this.ft)return this.ft=new Set(Object.keys(r)),this.render(r);for(const t of this.ft)null==r[t]&&(this.ft.delete(t),t.includes("-")?s.removeProperty(t):s[t]=null);for(const t in r){const e=r[t];if(null!=e){this.ft.add(t);const r="string"==typeof e&&e.endsWith(i);t.includes("-")||r?s.setProperty(t,r?e.slice(0,-11):e,r?n:""):s[t]=e}}return lit_html.c0}})},"./stories/data-display/Card.stories.js":(__unused_webpack_module,__webpack_exports__,__webpack_require__)=>{__webpack_require__.r(__webpack_exports__),__webpack_require__.d(__webpack_exports__,{Basic:()=>Basic,Complex:()=>Complex,WithFooter:()=>WithFooter,WithHeader:()=>WithHeader,WithImage:()=>WithImage,__namedExportsOrder:()=>__namedExportsOrder,default:()=>Card_stories});var lit=__webpack_require__("./node_modules/lit/index.js"),card_styles_default=lit.AH`
+  :host {
+    --border-color: var(--sl-color-neutral-200);
+    --border-radius: var(--sl-border-radius-medium);
+    --border-width: 1px;
+    --padding: var(--sl-spacing-large);
+
+    display: inline-block;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--sl-panel-background-color);
+    box-shadow: var(--sl-shadow-x-small);
+    border: solid var(--border-width) var(--border-color);
+    border-radius: var(--border-radius);
+  }
+
+  .card__image {
+    display: flex;
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+    margin: calc(-1 * var(--border-width));
+    overflow: hidden;
+  }
+
+  .card__image::slotted(img) {
+    display: block;
+    width: 100%;
+  }
+
+  .card:not(.card--has-image) .card__image {
+    display: none;
+  }
+
+  .card__header {
+    display: block;
+    border-bottom: solid var(--border-width) var(--border-color);
+    padding: calc(var(--padding) / 2) var(--padding);
+  }
+
+  .card:not(.card--has-header) .card__header {
+    display: none;
+  }
+
+  .card:not(.card--has-image) .card__header {
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+  }
+
+  .card__body {
+    display: block;
+    padding: var(--padding);
+  }
+
+  .card--has-footer .card__footer {
+    display: block;
+    border-top: solid var(--border-width) var(--border-color);
+    padding: var(--padding);
+  }
+
+  .card:not(.card--has-footer) .card__footer {
+    display: none;
+  }
+`,chunk_NYIIDP5N=__webpack_require__("./node_modules/@shoelace-style/shoelace/dist/chunks/chunk.NYIIDP5N.js"),chunk_TUVJKY7S=__webpack_require__("./node_modules/@shoelace-style/shoelace/dist/chunks/chunk.TUVJKY7S.js"),chunk_PFOQ5QRR=__webpack_require__("./node_modules/@shoelace-style/shoelace/dist/chunks/chunk.PFOQ5QRR.js"),class_map=__webpack_require__("./node_modules/lit/directives/class-map.js"),chunk_YUOHZV33_SlCard=class extends chunk_PFOQ5QRR.f{constructor(){super(...arguments),this.hasSlotController=new chunk_NYIIDP5N.X(this,"footer","header","image")}render(){return lit.qy`
+      <div
+        part="base"
+        class=${(0,class_map.H)({card:!0,"card--has-footer":this.hasSlotController.test("footer"),"card--has-image":this.hasSlotController.test("image"),"card--has-header":this.hasSlotController.test("header")})}
+      >
+        <slot name="image" part="image" class="card__image"></slot>
+        <slot name="header" part="header" class="card__header"></slot>
+        <slot part="body" class="card__body"></slot>
+        <slot name="footer" part="footer" class="card__footer"></slot>
+      </div>
+    `}};chunk_YUOHZV33_SlCard.styles=[chunk_TUVJKY7S.$,card_styles_default];chunk_YUOHZV33_SlCard.define("sl-card");__webpack_require__("./node_modules/@shoelace-style/shoelace/dist/chunks/chunk.KAW7D32O.js"),__webpack_require__("./node_modules/@shoelace-style/shoelace/dist/components/button/button.js"),__webpack_require__("./node_modules/@shoelace-style/shoelace/dist/components/icon-button/icon-button.js"),__webpack_require__("./node_modules/@shoelace-style/shoelace/dist/components/rating/rating.js");const Card_stories={title:"Shoelace/Data Display/Card",tags:["autodocs"],render:args=>lit.qy`
     <sl-card
       style="max-width: 300px"
       class=${args.className||""}
     >
-      ${args.image?lit__WEBPACK_IMPORTED_MODULE_0__.qy`
+      ${args.image?lit.qy`
         <img
           slot="image"
           src=${args.image}
@@ -297,10 +297,10 @@
         />
       `:""}
       
-      ${args.header?lit__WEBPACK_IMPORTED_MODULE_0__.qy`
+      ${args.header?lit.qy`
         <div slot="header">
           ${args.header}
-          ${args.headerAction?lit__WEBPACK_IMPORTED_MODULE_0__.qy`
+          ${args.headerAction?lit.qy`
             <sl-icon-button name="gear" label="Settings"></sl-icon-button>
           `:""}
         </div>
@@ -308,13 +308,13 @@
 
       ${args.content}
 
-      ${args.footer?lit__WEBPACK_IMPORTED_MODULE_0__.qy`
+      ${args.footer?lit.qy`
         <div slot="footer">
           ${args.footer}
         </div>
       `:""}
     </sl-card>
-  `,argTypes:{className:{control:"text"},image:{control:"text"},imageAlt:{control:"text"},header:{control:"text"},headerAction:{control:"boolean"},content:{control:"text"},footer:{control:"text"}}},Basic={args:{content:"This is just a basic card. No image, no header, and no footer. Just your content."}},WithHeader={render:()=>lit__WEBPACK_IMPORTED_MODULE_0__.qy`
+  `,argTypes:{className:{control:"text"},image:{control:"text"},imageAlt:{control:"text"},header:{control:"text"},headerAction:{control:"boolean"},content:{control:"text"},footer:{control:"text"}}},Basic={args:{content:"This is just a basic card. No image, no header, and no footer. Just your content."}},WithHeader={render:()=>lit.qy`
     <sl-card style="max-width: 300px">
       <div slot="header" style="display: flex; align-items: center; justify-content: space-between;">
         Header Title
@@ -322,7 +322,7 @@
       </div>
       This card has a header. You can put all sorts of things in it!
     </sl-card>
-  `},WithFooter={render:()=>lit__WEBPACK_IMPORTED_MODULE_0__.qy`
+  `},WithFooter={render:()=>lit.qy`
     <sl-card style="max-width: 300px">
       This card has a footer. You can put all sorts of things in it!
       <div slot="footer" style="display: flex; justify-content: space-between; align-items: center;">
@@ -330,7 +330,7 @@
         <sl-button variant="primary">Preview</sl-button>
       </div>
     </sl-card>
-  `},WithImage={args:{image:"https://images.unsplash.com/photo-1547191783-94d5f8f6d8b1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=80",imageAlt:"A kitten walks towards camera on top of pallet.",content:"This is a kitten, but not just any kitten. This kitten likes walking along pallets."}},Complex={render:()=>lit__WEBPACK_IMPORTED_MODULE_0__.qy`
+  `},WithImage={args:{image:"https://images.unsplash.com/photo-1547191783-94d5f8f6d8b1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=80",imageAlt:"A kitten walks towards camera on top of pallet.",content:"This is a kitten, but not just any kitten. This kitten likes walking along pallets."}},Complex={render:()=>lit.qy`
     <sl-card style="max-width: 300px">
       <img
         slot="image"
@@ -346,4 +346,4 @@
       </div>
     </sl-card>
   `},__namedExportsOrder=["Basic","WithHeader","WithFooter","WithImage","Complex"];Basic.parameters={...Basic.parameters,docs:{...Basic.parameters?.docs,source:{originalSource:"{\n  args: {\n    content: 'This is just a basic card. No image, no header, and no footer. Just your content.'\n  }\n}",...Basic.parameters?.docs?.source}}},WithHeader.parameters={...WithHeader.parameters,docs:{...WithHeader.parameters?.docs,source:{originalSource:'{\n  render: () => html`\n    <sl-card style="max-width: 300px">\n      <div slot="header" style="display: flex; align-items: center; justify-content: space-between;">\n        Header Title\n        <sl-icon-button name="gear" label="Settings"></sl-icon-button>\n      </div>\n      This card has a header. You can put all sorts of things in it!\n    </sl-card>\n  `\n}',...WithHeader.parameters?.docs?.source}}},WithFooter.parameters={...WithFooter.parameters,docs:{...WithFooter.parameters?.docs,source:{originalSource:'{\n  render: () => html`\n    <sl-card style="max-width: 300px">\n      This card has a footer. You can put all sorts of things in it!\n      <div slot="footer" style="display: flex; justify-content: space-between; align-items: center;">\n        <sl-rating></sl-rating>\n        <sl-button variant="primary">Preview</sl-button>\n      </div>\n    </sl-card>\n  `\n}',...WithFooter.parameters?.docs?.source}}},WithImage.parameters={...WithImage.parameters,docs:{...WithImage.parameters?.docs,source:{originalSource:"{\n  args: {\n    image: 'https://images.unsplash.com/photo-1547191783-94d5f8f6d8b1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=80',\n    imageAlt: 'A kitten walks towards camera on top of pallet.',\n    content: 'This is a kitten, but not just any kitten. This kitten likes walking along pallets.'\n  }\n}",...WithImage.parameters?.docs?.source}}},Complex.parameters={...Complex.parameters,docs:{...Complex.parameters?.docs,source:{originalSource:'{\n  render: () => html`\n    <sl-card style="max-width: 300px">\n      <img\n        slot="image"\n        src="https://images.unsplash.com/photo-1559209172-0ff8f6d49ff7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80"\n        alt="A kitten sits patiently between a terracotta pot and decorative grasses."\n      />\n      <strong>Mittens</strong><br />\n      This kitten is as cute as he is playful. Bring him home today!<br />\n      <small style="color: var(--sl-color-neutral-500)">6 weeks old</small>\n      <div slot="footer" style="display: flex; justify-content: space-between; align-items: center;">\n        <sl-button variant="primary" pill>More Info</sl-button>\n        <sl-rating></sl-rating>\n      </div>\n    </sl-card>\n  `\n}',...Complex.parameters?.docs?.source}}}}}]);
-//# sourceMappingURL=data-display-Card-stories.a8878615.iframe.bundle.js.map
+//# sourceMappingURL=data-display-Card-stories.b04b5537.iframe.bundle.js.map
