@@ -4,21 +4,6 @@ import { html } from 'lit';
 import '@shoelace-style/shoelace/dist/components/alert/alert.js';
 import '@shoelace-style/shoelace/dist/components/icon/icon.js';
 
-function getIconForVariant(variant) {
-  switch (variant) {
-    case 'primary':
-      return 'fa-light fa-circle-info';
-    case 'success':
-      return 'fa-light fa-circle-check';
-    case 'warning':
-      return 'fa-light fa-circle-exclamation';
-    case 'danger':
-      return 'fa-light fa-triangle-exclamation';
-    default:
-      return 'fa-light fa-circle-info';
-  }
-}
-
 const meta = {
   title: 'Shoelace/Overlays/Alert',
   tags: ['autodocs'],
@@ -37,8 +22,7 @@ const meta = {
     if (args.icon) {
       const icon = document.createElement('sl-icon');
       icon.slot = 'icon';
-      icon.library = 'fa';
-      icon.name = getIconForVariant(args.variant);
+      icon.name = args.icon;
       alert.appendChild(icon);
     }
     
