@@ -11,46 +11,49 @@ const meta = {
   title: 'Shoelace/Forms/Select',
   tags: ['autodocs'],
   render: (args) => html`
-    <sl-select
-      label=${args.label || ''}
-      help-text=${args.helpText || ''}
-      placeholder=${args.placeholder || ''}
-      size=${args.size || 'medium'}
-      ?multiple=${args.multiple}
-      ?clearable=${args.clearable}
-      ?filled=${args.filled}
-      ?pill=${args.pill}
-      ?disabled=${args.disabled}
-      ?required=${args.required}
-      value=${args.value || ''}
-      placement=${args.placement || 'bottom'}
-      style=${args.style || ''}
-    >
-      ${args.prefix ? html`
-        <sl-icon name="house" slot="prefix"></sl-icon>
-      ` : ''}
-      
-      ${args.suffix ? html`
-        <sl-badge slot="suffix">New</sl-badge>
-      ` : ''}
+    <div style="min-height: 400px; position: relative; padding-top: 20px;">
+      <sl-select
+        label=${args.label || ''}
+        help-text=${args.helpText || ''}
+        placeholder=${args.placeholder || ''}
+        size=${args.size || 'medium'}
+        ?multiple=${args.multiple}
+        ?clearable=${args.clearable}
+        ?filled=${args.filled}
+        ?pill=${args.pill}
+        ?disabled=${args.disabled}
+        ?required=${args.required}
+        value=${args.value || ''}
+        placement="bottom"
+        style=${args.style || ''}
+        hoist
+      >
+        ${args.prefix ? html`
+          <sl-icon name="house" slot="prefix"></sl-icon>
+        ` : ''}
+        
+        ${args.suffix ? html`
+          <sl-badge slot="suffix">New</sl-badge>
+        ` : ''}
 
-      ${args.hasGroups ? html`
-        <small>Section 1</small>
-        <sl-option value="option-1">Option 1</sl-option>
-        <sl-option value="option-2">Option 2</sl-option>
-        <sl-option value="option-3">Option 3</sl-option>
-        <sl-divider></sl-divider>
-        <small>Section 2</small>
-        <sl-option value="option-4">Option 4</sl-option>
-        <sl-option value="option-5">Option 5</sl-option>
-        <sl-option value="option-6">Option 6</sl-option>
-      ` : html`
-        <sl-option value="option-1">Option 1</sl-option>
-        <sl-option value="option-2">Option 2</sl-option>
-        <sl-option value="option-3">Option 3</sl-option>
-        <sl-option value="option-4">Option 4</sl-option>
-      `}
-    </sl-select>
+        ${args.hasGroups ? html`
+          <small>Section 1</small>
+          <sl-option value="option-1">Option 1</sl-option>
+          <sl-option value="option-2">Option 2</sl-option>
+          <sl-option value="option-3">Option 3</sl-option>
+          <sl-divider></sl-divider>
+          <small>Section 2</small>
+          <sl-option value="option-4">Option 4</sl-option>
+          <sl-option value="option-5">Option 5</sl-option>
+          <sl-option value="option-6">Option 6</sl-option>
+        ` : html`
+          <sl-option value="option-1">Option 1</sl-option>
+          <sl-option value="option-2">Option 2</sl-option>
+          <sl-option value="option-3">Option 3</sl-option>
+          <sl-option value="option-4">Option 4</sl-option>
+        `}
+      </sl-select>
+    </div>
   `,
   argTypes: {
     label: { 
@@ -221,20 +224,20 @@ export const Disabled = {
 // Sizes
 export const Sizes = {
   render: () => html`
-    <div style="display: flex; flex-direction: column; gap: 1rem;">
-      <sl-select size="small" placeholder="Small">
+    <div style="display: flex; flex-direction: column; gap: 1rem; min-height: 400px; padding-top: 20px;">
+      <sl-select size="small" placeholder="Small" placement="bottom" hoist>
         <sl-option value="option-1">Option 1</sl-option>
         <sl-option value="option-2">Option 2</sl-option>
         <sl-option value="option-3">Option 3</sl-option>
       </sl-select>
 
-      <sl-select size="medium" placeholder="Medium">
+      <sl-select size="medium" placeholder="Medium" placement="bottom" hoist>
         <sl-option value="option-1">Option 1</sl-option>
         <sl-option value="option-2">Option 2</sl-option>
         <sl-option value="option-3">Option 3</sl-option>
       </sl-select>
 
-      <sl-select size="large" placeholder="Large">
+      <sl-select size="large" placeholder="Large" placement="bottom" hoist>
         <sl-option value="option-1">Option 1</sl-option>
         <sl-option value="option-2">Option 2</sl-option>
         <sl-option value="option-3">Option 3</sl-option>
