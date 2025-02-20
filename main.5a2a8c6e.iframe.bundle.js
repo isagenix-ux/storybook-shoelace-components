@@ -11,30 +11,22 @@
           --sl-font-mono: monospace;
 
           /* Primary colors */
-          --sl-color-primary-50: #F2F8F9;
-          --sl-color-primary-100: #E0EEF1;
+          --sl-color-primary-100: #F2F8F9;
+          --sl-color-primary-150: #E0EEF1;
           --sl-color-primary-200: #BFDDE2;
           --sl-color-primary-300: #4099A8;
-          --sl-color-primary-400: #1F8A9C;
           --sl-color-primary-500: #00778B;
-          --sl-color-primary-600: #00778B;
           --sl-color-primary-700: #0C5F6F;
           --sl-color-primary-800: #0C5F6F;
           --sl-color-primary-900: #003038;
-          --sl-color-primary-950: #002128;
 
           /* Neutral colors */
-          --sl-color-neutral-50: #F6F6F6;
-          --sl-color-neutral-100: #EDEEE;
+          --sl-color-neutral-100: #EDEEEE;
           --sl-color-neutral-200: #D4D5D5;
-          --sl-color-neutral-300: #B6B8B9;
-          --sl-color-neutral-400: #949697;
           --sl-color-neutral-500: #727677;
-          --sl-color-neutral-600: #54585A;
           --sl-color-neutral-700: #3F4244;
           --sl-color-neutral-800: #303030;
           --sl-color-neutral-900: #1C1D1D;
-          --sl-color-neutral-950: #0F0F0F;
         }
 
         /* Checkbox overrides */
@@ -100,17 +92,66 @@
         }
 
         /* Button overrides */
-        sl-button::part(base) {
-          --sl-button-primary-background-color: #00778B;
-          --sl-button-primary-border-color: #00778B;
-          --sl-button-primary-hover-background-color: #0C5F6F;
-          --sl-button-primary-hover-border-color: #0C5F6F;
-          --sl-button-primary-active-background-color: #0C5F6F;
-          --sl-button-primary-active-border-color: #0C5F6F;
+        /* Primary button */
+        .sl-theme-light sl-button[variant='primary']::part(base) {
+          background-color: #00778B;  /* Turquoise 500 */
+          border-color: #00778B;      /* Turquoise 500 */
+        }
+
+        .sl-theme-light sl-button[variant='primary']:not([disabled])::part(base):hover {
+          background-color: #0C5F6F;  /* Turquoise 700 */
+          border-color: #0C5F6F;      /* Turquoise 700 */
+        }
+
+        /* Secondary button */
+        .sl-theme-light sl-button[variant='secondary']::part(base) {
+          background-color: #FFFFFF;  /* White background */
+          border-color: var(--sl-color-neutral-300);
+        }
+
+        .sl-theme-light sl-button[variant='secondary']:not([disabled])::part(base):hover {
+          background-color: #F6F6F6;  /* Granite 100 */
+          border-color: var(--sl-color-neutral-300);
+          color: var(--sl-color-neutral-700);
+        }
+
+        /* Text button */
+        .sl-theme-light sl-button[variant='text']::part(base) {
+          background-color: transparent;
+          border-color: transparent;
+          color: #D4D5D5;  /* Granite 500 */
+        }
+
+        .sl-theme-light sl-button[variant='text']:not([disabled])::part(base):hover {
+          color: #0C5F6F;  /* Turquoise 700 */
+          background: none;
+        }
+
+        /* Disabled states */
+        /* Primary disabled */
+        .sl-theme-light sl-button[variant='primary'][disabled]::part(base) {
+          background-color: #D4D5D5 !important;  /* Granite 500 */
+          border-color: #D4D5D5 !important;      /* Granite 500 */
+          color: #FFFFFF !important;             /* White text */
+          opacity: 1;
+        }
+
+        /* Secondary disabled */
+        .sl-theme-light sl-button[variant='secondary'][disabled]::part(base) {
+          background-color: #FFFFFF !important;   /* White background */
+          border-color: #D4D5D5 !important;      /* Granite 500 */
+          color: #D4D5D5 !important;             /* Granite 500 */
+          opacity: 1;
+        }
+
+        /* Text disabled */
+        .sl-theme-light sl-button[variant='text'][disabled]::part(base) {
+          color: #D4D5D5 !important;             /* Granite 500 */
+          opacity: 1;
         }
       </style>
       <div class="sl-theme-light story-wrapper">
         ${story()}
       </div>
     `]}},"./stories lazy recursive ^\\.\\/.*$ include: (?%21.*node_modules)(?:\\/stories(?:\\/(?%21\\.)(?:(?:(?%21(?:^%7C\\/)\\.).)*?)\\/%7C\\/%7C$)(?%21\\.)(?=.)[^/]*?\\.mdx)$":(module,__unused_webpack_exports,__webpack_require__)=>{var map={"./Configure.mdx":["./stories/Configure.mdx",844,707]};function webpackAsyncContext(req){if(!__webpack_require__.o(map,req))return Promise.resolve().then((()=>{var e=new Error("Cannot find module '"+req+"'");throw e.code="MODULE_NOT_FOUND",e}));var ids=map[req],id=ids[0];return Promise.all(ids.slice(1).map(__webpack_require__.e)).then((()=>__webpack_require__(id)))}webpackAsyncContext.keys=()=>Object.keys(map),webpackAsyncContext.id="./stories lazy recursive ^\\.\\/.*$ include: (?%21.*node_modules)(?:\\/stories(?:\\/(?%21\\.)(?:(?:(?%21(?:^%7C\\/)\\.).)*?)\\/%7C\\/%7C$)(?%21\\.)(?=.)[^/]*?\\.mdx)$",module.exports=webpackAsyncContext},"./stories lazy recursive ^\\.\\/.*$ include: (?%21.*node_modules)(?:\\/stories(?:\\/(?%21\\.)(?:(?:(?%21(?:^%7C\\/)\\.).)*?)\\/%7C\\/%7C$)(?%21\\.)(?=.)[^/]*?\\.stories\\.(js%7Cjsx%7Cmjs%7Cts%7Ctsx))$":(module,__unused_webpack_exports,__webpack_require__)=>{var map={"./Button.stories":["./stories/Button.stories.js",807,303],"./Button.stories.js":["./stories/Button.stories.js",807,303],"./Header.stories":["./stories/Header.stories.js",807,384],"./Header.stories.js":["./stories/Header.stories.js",807,384],"./Page.stories":["./stories/Page.stories.js",807,226],"./Page.stories.js":["./stories/Page.stories.js",807,226],"./buttons/Button.stories":["./stories/buttons/Button.stories.js",75,643,531],"./buttons/Button.stories.js":["./stories/buttons/Button.stories.js",75,643,531],"./data-display/Avatar.stories":["./stories/data-display/Avatar.stories.js",256],"./data-display/Avatar.stories.js":["./stories/data-display/Avatar.stories.js",256],"./data-display/Card.stories":["./stories/data-display/Card.stories.js",75,643,421],"./data-display/Card.stories.js":["./stories/data-display/Card.stories.js",75,643,421],"./forms/Checkbox.stories":["./stories/forms/Checkbox.stories.js",75,643,22],"./forms/Checkbox.stories.js":["./stories/forms/Checkbox.stories.js",75,643,22],"./foundations/Colors.stories":["./stories/foundations/Colors.stories.js",324],"./foundations/Colors.stories.js":["./stories/foundations/Colors.stories.js",324],"./overlays/Alert.stories":["./stories/overlays/Alert.stories.js",75,805],"./overlays/Alert.stories.js":["./stories/overlays/Alert.stories.js",75,805],"./overlays/Dialog.stories":["./stories/overlays/Dialog.stories.js",75,643,447,802],"./overlays/Dialog.stories.js":["./stories/overlays/Dialog.stories.js",75,643,447,802]};function webpackAsyncContext(req){if(!__webpack_require__.o(map,req))return Promise.resolve().then((()=>{var e=new Error("Cannot find module '"+req+"'");throw e.code="MODULE_NOT_FOUND",e}));var ids=map[req],id=ids[0];return Promise.all(ids.slice(1).map(__webpack_require__.e)).then((()=>__webpack_require__(id)))}webpackAsyncContext.keys=()=>Object.keys(map),webpackAsyncContext.id="./stories lazy recursive ^\\.\\/.*$ include: (?%21.*node_modules)(?:\\/stories(?:\\/(?%21\\.)(?:(?:(?%21(?:^%7C\\/)\\.).)*?)\\/%7C\\/%7C$)(?%21\\.)(?=.)[^/]*?\\.stories\\.(js%7Cjsx%7Cmjs%7Cts%7Ctsx))$",module.exports=webpackAsyncContext},"./storybook-config-entry.js":(__unused_webpack_module,__unused_webpack___webpack_exports__,__webpack_require__)=>{"use strict";var external_STORYBOOK_MODULE_CHANNELS_=__webpack_require__("storybook/internal/channels"),external_STORYBOOK_MODULE_PREVIEW_API_=__webpack_require__("storybook/internal/preview-api"),external_STORYBOOK_MODULE_GLOBAL_=__webpack_require__("@storybook/global");const importers=[async path=>{if(!/^\.[\\/](?:stories(?:\/(?!\.)(?:(?:(?!(?:^|\/)\.).)*?)\/|\/|$)(?!\.)(?=.)[^/]*?\.mdx)$/.exec(path))return;const pathRemainder=path.substring(10);return __webpack_require__("./stories lazy recursive ^\\.\\/.*$ include: (?%21.*node_modules)(?:\\/stories(?:\\/(?%21\\.)(?:(?:(?%21(?:^%7C\\/)\\.).)*?)\\/%7C\\/%7C$)(?%21\\.)(?=.)[^/]*?\\.mdx)$")("./"+pathRemainder)},async path=>{if(!/^\.[\\/](?:stories(?:\/(?!\.)(?:(?:(?!(?:^|\/)\.).)*?)\/|\/|$)(?!\.)(?=.)[^/]*?\.stories\.(js|jsx|mjs|ts|tsx))$/.exec(path))return;const pathRemainder=path.substring(10);return __webpack_require__("./stories lazy recursive ^\\.\\/.*$ include: (?%21.*node_modules)(?:\\/stories(?:\\/(?%21\\.)(?:(?:(?%21(?:^%7C\\/)\\.).)*?)\\/%7C\\/%7C$)(?%21\\.)(?=.)[^/]*?\\.stories\\.(js%7Cjsx%7Cmjs%7Cts%7Ctsx))$")("./"+pathRemainder)}];const channel=(0,external_STORYBOOK_MODULE_CHANNELS_.createBrowserChannel)({page:"preview"});external_STORYBOOK_MODULE_PREVIEW_API_.addons.setChannel(channel),"DEVELOPMENT"===external_STORYBOOK_MODULE_GLOBAL_.global.CONFIG_TYPE&&(window.__STORYBOOK_SERVER_CHANNEL__=channel);const preview=new external_STORYBOOK_MODULE_PREVIEW_API_.PreviewWeb((async function importFn(path){for(let i=0;i<importers.length;i++){const moduleExports=await(x=()=>importers[i](path),x());if(moduleExports)return moduleExports}var x}),(()=>(0,external_STORYBOOK_MODULE_PREVIEW_API_.composeConfigs)([__webpack_require__("./node_modules/@storybook/web-components/dist/entry-preview.mjs"),__webpack_require__("./node_modules/@storybook/web-components/dist/entry-preview-docs.mjs"),__webpack_require__("./node_modules/@storybook/addon-links/dist/preview.mjs"),__webpack_require__("./node_modules/@storybook/addon-essentials/dist/actions/preview.mjs"),__webpack_require__("./node_modules/@storybook/addon-essentials/dist/docs/preview.mjs"),__webpack_require__("./node_modules/@storybook/addon-essentials/dist/backgrounds/preview.mjs"),__webpack_require__("./node_modules/@storybook/addon-essentials/dist/viewport/preview.mjs"),__webpack_require__("./node_modules/@storybook/addon-essentials/dist/measure/preview.mjs"),__webpack_require__("./node_modules/@storybook/addon-essentials/dist/outline/preview.mjs"),__webpack_require__("./node_modules/@storybook/addon-essentials/dist/highlight/preview.mjs"),__webpack_require__("./.storybook/preview.js")])));window.__STORYBOOK_PREVIEW__=preview,window.__STORYBOOK_STORY_STORE__=preview.storyStore,window.__STORYBOOK_ADDONS_CHANNEL__=channel},"@storybook/global":module=>{"use strict";module.exports=__STORYBOOK_MODULE_GLOBAL__},"storybook/internal/channels":module=>{"use strict";module.exports=__STORYBOOK_MODULE_CHANNELS__},"storybook/internal/client-logger":module=>{"use strict";module.exports=__STORYBOOK_MODULE_CLIENT_LOGGER__},"storybook/internal/core-events":module=>{"use strict";module.exports=__STORYBOOK_MODULE_CORE_EVENTS__},"storybook/internal/preview-api":module=>{"use strict";module.exports=__STORYBOOK_MODULE_PREVIEW_API__},"storybook/internal/preview-errors":module=>{"use strict";module.exports=__STORYBOOK_MODULE_CORE_EVENTS_PREVIEW_ERRORS__}},__webpack_require__=>{__webpack_require__.O(0,[927],(()=>{return moduleId="./storybook-config-entry.js",__webpack_require__(__webpack_require__.s=moduleId);var moduleId}));__webpack_require__.O()}]);
-//# sourceMappingURL=main.450efab3.iframe.bundle.js.map
+//# sourceMappingURL=main.5a2a8c6e.iframe.bundle.js.map
