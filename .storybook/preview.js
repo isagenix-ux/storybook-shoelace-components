@@ -126,13 +126,13 @@ const preview = {
 
         /* Secondary button */
         .sl-theme-light sl-button[variant='secondary']::part(base) {
-          background-color: #D4D5D5;  /* Granite 500 */
-          border-color: #00778B;      /* Turquoise 500 */
+          background-color: #FFFFFF;  /* White background */
+          border-color: var(--sl-color-neutral-300);
         }
 
         .sl-theme-light sl-button[variant='secondary']:not([disabled])::part(base):hover {
           background-color: #F6F6F6;  /* Granite 100 */
-          border-color: #00778B;      /* Turquoise 500 */
+          border-color: var(--sl-color-neutral-300);
           color: var(--sl-color-neutral-700);
         }
 
@@ -140,7 +140,7 @@ const preview = {
         .sl-theme-light sl-button[variant='text']::part(base) {
           background-color: transparent;
           border-color: transparent;
-          color: #00778B;  /* Turquoise 500 */
+          color: #D4D5D5;  /* Granite 500 */
         }
 
         .sl-theme-light sl-button[variant='text']:not([disabled])::part(base):hover {
@@ -148,12 +148,27 @@ const preview = {
           background: none;
         }
 
-        /* Disabled state for all buttons */
-        .sl-theme-light sl-button[disabled]::part(base) {
+        /* Disabled states */
+        /* Primary disabled */
+        .sl-theme-light sl-button[variant='primary'][disabled]::part(base) {
           background-color: #D4D5D5 !important;  /* Granite 500 */
           border-color: #D4D5D5 !important;      /* Granite 500 */
           color: #FFFFFF !important;             /* White text */
-          opacity: 1;                            /* Override default opacity */
+          opacity: 1;
+        }
+
+        /* Secondary disabled */
+        .sl-theme-light sl-button[variant='secondary'][disabled]::part(base) {
+          background-color: #FFFFFF !important;   /* White background */
+          border-color: #D4D5D5 !important;      /* Granite 500 */
+          color: #D4D5D5 !important;             /* Granite 500 */
+          opacity: 1;
+        }
+
+        /* Text disabled */
+        .sl-theme-light sl-button[variant='text'][disabled]::part(base) {
+          color: #D4D5D5 !important;             /* Granite 500 */
+          opacity: 1;
         }
       </style>
       <div class="sl-theme-light story-wrapper">
