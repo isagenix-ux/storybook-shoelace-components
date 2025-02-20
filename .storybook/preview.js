@@ -1,11 +1,16 @@
 import { html } from 'lit';
 import { setBasePath } from '@shoelace-style/shoelace/dist/utilities/base-path';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { falCircleInfo } from '@fortawesome/pro-light-svg-icons';
 
 // Import Shoelace styles
 import '@shoelace-style/shoelace/dist/themes/light.css';
 
 // Set the base path for Shoelace assets
 setBasePath('/shoelace');
+
+// Add just the info icon to the library
+library.add(falCircleInfo);
 
 /** @type { import('@storybook/web-components').Preview } */
 const preview = {
