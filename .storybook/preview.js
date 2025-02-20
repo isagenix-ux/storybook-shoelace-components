@@ -126,13 +126,13 @@ const preview = {
 
         /* Secondary button */
         .sl-theme-light sl-button[variant='secondary']::part(base) {
-          background-color: #FFFFFF;  /* White background */
-          border-color: var(--sl-color-neutral-300);
+          background-color: #D4D5D5;  /* Granite 500 */
+          border-color: #00778B;      /* Turquoise 500 */
         }
 
         .sl-theme-light sl-button[variant='secondary']:not([disabled])::part(base):hover {
           background-color: #F6F6F6;  /* Granite 100 */
-          border-color: var(--sl-color-neutral-300);
+          border-color: #00778B;      /* Turquoise 500 */
           color: var(--sl-color-neutral-700);
         }
 
@@ -150,8 +150,8 @@ const preview = {
 
         /* Disabled state for all buttons */
         .sl-theme-light sl-button[disabled]::part(base) {
-          background-color: #727677 !important;  /* Granite 500 */
-          border-color: #727677 !important;      /* Granite 500 */
+          background-color: #D4D5D5 !important;  /* Granite 500 */
+          border-color: #D4D5D5 !important;      /* Granite 500 */
           color: #FFFFFF !important;             /* White text */
           opacity: 1;                            /* Override default opacity */
         }
