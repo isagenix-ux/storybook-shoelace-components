@@ -1,8 +1,22 @@
 import { html } from 'lit';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { 
+  falCircleInfo, 
+  falCircleCheck, 
+  falCircleExclamation, 
+  falTriangleExclamation 
+} from '@fortawesome/pro-light-svg-icons';
 
 // Import Shoelace components
 import '@shoelace-style/shoelace/dist/components/alert/alert.js';
 import '@shoelace-style/shoelace/dist/components/icon/icon.js';
+
+library.add(
+  falCircleInfo,
+  falCircleCheck,
+  falCircleExclamation,
+  falTriangleExclamation
+);
 
 const meta = {
   title: 'Shoelace/Overlays/Alert',
@@ -22,7 +36,8 @@ const meta = {
     if (args.icon) {
       const icon = document.createElement('sl-icon');
       icon.slot = 'icon';
-      icon.name = args.icon;
+      icon.library = 'fa';
+      icon.name = getIconForVariant(args.variant);
       alert.appendChild(icon);
     }
     
@@ -49,12 +64,27 @@ const meta = {
       control: 'select',
       options: ['', 'rtl', 'ltr']
     },
-    icon: { control: 'text' },
+    icon: { control: 'boolean' },
     hasHeader: { control: 'boolean' },
     header: { control: 'text' },
     content: { control: 'text' }
   }
 };
+
+function getIconForVariant(variant) {
+  switch (variant) {
+    case 'primary':
+      return 'fa-light fa-circle-info';
+    case 'success':
+      return 'fa-light fa-circle-check';
+    case 'warning':
+      return 'fa-light fa-circle-exclamation';
+    case 'danger':
+      return 'fa-light fa-triangle-exclamation';
+    default:
+      return 'fa-light fa-circle-info';
+  }
+}
 
 export default meta;
 
@@ -62,18 +92,19 @@ export default meta;
 export const Basic = {
   args: {
     content: 'This is a standard alert. You can customize its content and even the icon.',
-    icon: 'info-circle'
+    icon: true,
+    variant: 'primary'
   }
 };
 
-// Variants
+// Variants with Font Awesome icons
 export const Primary = {
   args: {
     variant: 'primary',
     hasHeader: true,
     header: 'This is super informative',
     content: 'You can tell by how pretty the alert is.',
-    icon: 'info-circle'
+    icon: true
   }
 };
 
@@ -83,17 +114,7 @@ export const Success = {
     hasHeader: true,
     header: 'Your changes have been saved',
     content: 'You can safely exit the app now.',
-    icon: 'check2-circle'
-  }
-};
-
-export const Neutral = {
-  args: {
-    variant: 'neutral',
-    hasHeader: true,
-    header: 'Your settings have been updated',
-    content: 'Settings will take effect on next login.',
-    icon: 'gear'
+    icon: true
   }
 };
 
@@ -103,7 +124,7 @@ export const Warning = {
     hasHeader: true,
     header: 'Your session has ended',
     content: 'Please login again to continue.',
-    icon: 'exclamation-triangle'
+    icon: true
   }
 };
 
@@ -113,7 +134,7 @@ export const Danger = {
     hasHeader: true,
     header: 'Your account has been deleted',
     content: 'We\'re very sorry to see you go!',
-    icon: 'exclamation-octagon'
+    icon: true
   }
 };
 
@@ -122,7 +143,7 @@ export const Closable = {
   args: {
     closable: true,
     content: 'You can close this alert any time!',
-    icon: 'info-circle'
+    icon: true
   }
 };
 
@@ -139,7 +160,7 @@ export const WithDuration = {
     closable: true,
     duration: 3000,
     content: 'This alert will automatically hide itself after three seconds, unless you interact with it.',
-    icon: 'info-circle'
+    icon: true
   }
 };
 
@@ -150,6 +171,6 @@ export const WithCountdown = {
     duration: 10000,
     countdown: 'rtl',
     content: 'You\'re not stuck, the alert will close after a pretty long duration.',
-    icon: 'info-circle'
+    icon: true
   }
 }; 

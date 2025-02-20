@@ -1,11 +1,26 @@
 import { html } from 'lit';
 import { setBasePath } from '@shoelace-style/shoelace/dist/utilities/base-path';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { 
+  falCircleInfo, 
+  falCircleCheck, 
+  falCircleExclamation, 
+  falTriangleExclamation 
+} from '@fortawesome/pro-light-svg-icons';
 
 // Import Shoelace styles
 import '@shoelace-style/shoelace/dist/themes/light.css';
 
 // Set the base path for Shoelace assets
 setBasePath('/shoelace');
+
+// Add icons to the library
+library.add(
+  falCircleInfo,
+  falCircleCheck,
+  falCircleExclamation,
+  falTriangleExclamation
+);
 
 /** @type { import('@storybook/web-components').Preview } */
 const preview = {
