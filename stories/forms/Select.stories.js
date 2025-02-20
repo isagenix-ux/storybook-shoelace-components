@@ -5,6 +5,7 @@ import '@shoelace-style/shoelace/dist/components/select/select.js';
 import '@shoelace-style/shoelace/dist/components/option/option.js';
 import '@shoelace-style/shoelace/dist/components/divider/divider.js';
 import '@shoelace-style/shoelace/dist/components/icon/icon.js';
+import '@shoelace-style/shoelace/dist/components/badge/badge.js';
 
 const meta = {
   title: 'Shoelace/Forms/Select',
@@ -20,13 +21,19 @@ const meta = {
       ?filled=${args.filled}
       ?pill=${args.pill}
       ?disabled=${args.disabled}
+      ?required=${args.required}
       value=${args.value || ''}
       placement=${args.placement || 'bottom'}
+      style=${args.style || ''}
     >
       ${args.prefix ? html`
         <sl-icon name="house" slot="prefix"></sl-icon>
       ` : ''}
       
+      ${args.suffix ? html`
+        <sl-badge slot="suffix">New</sl-badge>
+      ` : ''}
+
       ${args.hasGroups ? html`
         <small>Section 1</small>
         <sl-option value="option-1">Option 1</sl-option>
@@ -99,17 +106,30 @@ const meta = {
     hasGroups: {
       control: 'boolean',
       description: 'Shows grouped options'
+    },
+    required: {
+      control: 'boolean',
+      description: 'Makes the select required'
+    },
+    suffix: {
+      control: 'boolean',
+      description: 'Shows a suffix element'
+    },
+    style: {
+      control: 'text',
+      description: 'Additional styles'
     }
   }
 };
 
 export default meta;
 
-// Basic select
+// Basic select with standard width
 export const Basic = {
   args: {
     label: 'Select one',
-    placeholder: 'Choose an option'
+    placeholder: 'Choose an option',
+    style: 'max-width: 300px;'
   }
 };
 
@@ -118,7 +138,46 @@ export const WithHelpText = {
   args: {
     label: 'Experience',
     helpText: 'Please tell us your skill level.',
-    placeholder: 'Choose an option'
+    placeholder: 'Choose an option',
+    style: 'max-width: 300px;'
+  }
+};
+
+// Multiple with initial values
+export const Multiple = {
+  args: {
+    label: 'Select Multiple',
+    placeholder: 'Choose options',
+    multiple: true,
+    clearable: true,
+    value: 'option-1 option-2',
+    style: 'max-width: 300px;'
+  }
+};
+
+// Required validation
+export const Required = {
+  render: () => html`
+    <form class="validation-example">
+      <sl-select label="Select one" required style="max-width: 300px;">
+        <sl-option value="option-1">Option 1</sl-option>
+        <sl-option value="option-2">Option 2</sl-option>
+        <sl-option value="option-3">Option 3</sl-option>
+      </sl-select>
+      <br>
+      <sl-button type="submit" variant="primary">Submit</sl-button>
+    </form>
+  `
+};
+
+// Prefix and Suffix
+export const WithPrefixAndSuffix = {
+  args: {
+    label: 'Select with Prefix & Suffix',
+    placeholder: 'Choose an option',
+    prefix: true,
+    suffix: true,
+    style: 'max-width: 300px;'
   }
 };
 
@@ -129,16 +188,6 @@ export const Clearable = {
     placeholder: 'Choose an option',
     clearable: true,
     value: 'option-1'
-  }
-};
-
-// Multiple
-export const Multiple = {
-  args: {
-    label: 'Select Multiple',
-    placeholder: 'Choose options',
-    multiple: true,
-    clearable: true
   }
 };
 
