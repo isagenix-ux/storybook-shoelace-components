@@ -63,15 +63,6 @@ export const Basic = {
   }
 };
 
-// Basic alert with Font Awesome icon
-export const BasicWithFontAwesome = {
-  args: {
-    content: 'This alert uses a Font Awesome light icon.',
-    variant: 'primary',
-    icon: 'fa-light fa-circle-info'  // Using Font Awesome light icon
-  }
-};
-
 // Variants
 export const Primary = {
   args: {
