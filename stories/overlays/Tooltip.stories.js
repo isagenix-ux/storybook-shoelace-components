@@ -9,7 +9,7 @@ const meta = {
   title: 'Shoelace/Overlays/Tooltip',
   tags: ['autodocs'],
   render: (args) => html`
-    <div style="padding: 100px; display: inline-block;">
+    <div style="min-height: 200px; padding: 50px;">
       <sl-tooltip
         content=${args.content}
         placement=${args.placement || 'top'}
@@ -17,7 +17,7 @@ const meta = {
         distance=${args.distance}
         ?open=${args.open}
         skidding=${args.skidding}
-        trigger=${args.trigger}
+        trigger=${args.trigger || 'hover'}
         ?hoist=${args.hoist}
         style=${args.maxWidth ? `--max-width: ${args.maxWidth};` : ''}
       >
