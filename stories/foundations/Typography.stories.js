@@ -17,30 +17,137 @@ export default meta;
 // Headings
 export const Headings = {
   render: () => html`
-    <div style="display: flex; flex-direction: column; gap: 1rem; font-family: 'Nunito Sans', sans-serif;">
+    <div style="display: flex; flex-direction: column; gap: 2rem; font-family: 'Nunito Sans', sans-serif;">
       <div>
-        <h1 style="margin: 0; font-size: 54px;">Heading 1</h1>
-        <div style="color: var(--sl-color-neutral-500); font-family: 'Nunito Sans', sans-serif;">54px</div>
+        <h3 style="font-size: 32px; margin-bottom: 1rem;">Heading 1 - 64px</h3>
+        <div style="display: flex; flex-direction: column; gap: 1rem;">
+          <div>
+            <h1 style="margin: 0; font-size: 64px; font-weight: 300;">Heading 1 Light</h1>
+            <div style="color: var(--sl-color-neutral-500); font-family: 'Nunito Sans', sans-serif;">font-weight: 300</div>
+          </div>
+          <div>
+            <h1 style="margin: 0; font-size: 64px; font-weight: 400;">Heading 1 Regular</h1>
+            <div style="color: var(--sl-color-neutral-500); font-family: 'Nunito Sans', sans-serif;">font-weight: 400</div>
+          </div>
+          <div>
+            <h1 style="margin: 0; font-size: 64px; font-weight: 600;">Heading 1 Semi-bold</h1>
+            <div style="color: var(--sl-color-neutral-500); font-family: 'Nunito Sans', sans-serif;">font-weight: 600</div>
+          </div>
+          <div>
+            <h1 style="margin: 0; font-size: 64px; font-weight: 700;">Heading 1 Bold</h1>
+            <div style="color: var(--sl-color-neutral-500); font-family: 'Nunito Sans', sans-serif;">font-weight: 700</div>
+          </div>
+        </div>
       </div>
+
       <div>
-        <h2 style="margin: 0; font-size: 48px;">Heading 2</h2>
-        <div style="color: var(--sl-color-neutral-500); font-family: 'Nunito Sans', sans-serif;">48px</div>
+        <h3 style="font-size: 32px; margin-bottom: 1rem;">Heading 2 - 48px</h3>
+        <div style="display: flex; flex-direction: column; gap: 1rem;">
+          <div>
+            <h2 style="margin: 0; font-size: 48px; font-weight: 300;">Heading 2 Light</h2>
+            <div style="color: var(--sl-color-neutral-500); font-family: 'Nunito Sans', sans-serif;">font-weight: 300</div>
+          </div>
+          <div>
+            <h2 style="margin: 0; font-size: 48px; font-weight: 400;">Heading 2 Regular</h2>
+            <div style="color: var(--sl-color-neutral-500); font-family: 'Nunito Sans', sans-serif;">font-weight: 400</div>
+          </div>
+          <div>
+            <h2 style="margin: 0; font-size: 48px; font-weight: 600;">Heading 2 Semi-bold</h2>
+            <div style="color: var(--sl-color-neutral-500); font-family: 'Nunito Sans', sans-serif;">font-weight: 600</div>
+          </div>
+          <div>
+            <h2 style="margin: 0; font-size: 48px; font-weight: 700;">Heading 2 Bold</h2>
+            <div style="color: var(--sl-color-neutral-500); font-family: 'Nunito Sans', sans-serif;">font-weight: 700</div>
+          </div>
+        </div>
       </div>
+
       <div>
-        <h3 style="margin: 0; font-size: 32px;">Heading 3</h3>
-        <div style="color: var(--sl-color-neutral-500); font-family: 'Nunito Sans', sans-serif;">32px</div>
+        <h3 style="font-size: 32px; margin-bottom: 1rem;">Heading 3 - 32px</h3>
+        <div style="display: flex; flex-direction: column; gap: 1rem;">
+          <div>
+            <h3 style="margin: 0; font-size: 32px; font-weight: 300;">Heading 3 Light</h3>
+            <div style="color: var(--sl-color-neutral-500); font-family: 'Nunito Sans', sans-serif;">font-weight: 300</div>
+          </div>
+          <div>
+            <h3 style="margin: 0; font-size: 32px; font-weight: 400;">Heading 3 Regular</h3>
+            <div style="color: var(--sl-color-neutral-500); font-family: 'Nunito Sans', sans-serif;">font-weight: 400</div>
+          </div>
+          <div>
+            <h3 style="margin: 0; font-size: 32px; font-weight: 600;">Heading 3 Semi-bold</h3>
+            <div style="color: var(--sl-color-neutral-500); font-family: 'Nunito Sans', sans-serif;">font-weight: 600</div>
+          </div>
+          <div>
+            <h3 style="margin: 0; font-size: 32px; font-weight: 700;">Heading 3 Bold</h3>
+            <div style="color: var(--sl-color-neutral-500); font-family: 'Nunito Sans', sans-serif;">font-weight: 700</div>
+          </div>
+        </div>
       </div>
+
       <div>
-        <h4 style="margin: 0; font-size: 24px;">Heading 4</h4>
-        <div style="color: var(--sl-color-neutral-500); font-family: 'Nunito Sans', sans-serif;">24px</div>
+        <h3 style="font-size: 32px; margin-bottom: 1rem;">Heading 4 - 24px</h3>
+        <div style="display: flex; flex-direction: column; gap: 1rem;">
+          <div>
+            <h4 style="margin: 0; font-size: 24px; font-weight: 300;">Heading 4 Light</h4>
+            <div style="color: var(--sl-color-neutral-500); font-family: 'Nunito Sans', sans-serif;">font-weight: 300</div>
+          </div>
+          <div>
+            <h4 style="margin: 0; font-size: 24px; font-weight: 400;">Heading 4 Regular</h4>
+            <div style="color: var(--sl-color-neutral-500); font-family: 'Nunito Sans', sans-serif;">font-weight: 400</div>
+          </div>
+          <div>
+            <h4 style="margin: 0; font-size: 24px; font-weight: 600;">Heading 4 Semi-bold</h4>
+            <div style="color: var(--sl-color-neutral-500); font-family: 'Nunito Sans', sans-serif;">font-weight: 600</div>
+          </div>
+          <div>
+            <h4 style="margin: 0; font-size: 24px; font-weight: 700;">Heading 4 Bold</h4>
+            <div style="color: var(--sl-color-neutral-500); font-family: 'Nunito Sans', sans-serif;">font-weight: 700</div>
+          </div>
+        </div>
       </div>
+
       <div>
-        <h5 style="margin: 0; font-size: 21px;">Heading 5</h5>
-        <div style="color: var(--sl-color-neutral-500); font-family: 'Nunito Sans', sans-serif;">21px</div>
+        <h3 style="font-size: 32px; margin-bottom: 1rem;">Heading 5 - 21px</h3>
+        <div style="display: flex; flex-direction: column; gap: 1rem;">
+          <div>
+            <h5 style="margin: 0; font-size: 21px; font-weight: 300;">Heading 5 Light</h5>
+            <div style="color: var(--sl-color-neutral-500); font-family: 'Nunito Sans', sans-serif;">font-weight: 300</div>
+          </div>
+          <div>
+            <h5 style="margin: 0; font-size: 21px; font-weight: 400;">Heading 5 Regular</h5>
+            <div style="color: var(--sl-color-neutral-500); font-family: 'Nunito Sans', sans-serif;">font-weight: 400</div>
+          </div>
+          <div>
+            <h5 style="margin: 0; font-size: 21px; font-weight: 600;">Heading 5 Semi-bold</h5>
+            <div style="color: var(--sl-color-neutral-500); font-family: 'Nunito Sans', sans-serif;">font-weight: 600</div>
+          </div>
+          <div>
+            <h5 style="margin: 0; font-size: 21px; font-weight: 700;">Heading 5 Bold</h5>
+            <div style="color: var(--sl-color-neutral-500); font-family: 'Nunito Sans', sans-serif;">font-weight: 700</div>
+          </div>
+        </div>
       </div>
+
       <div>
-        <h6 style="margin: 0; font-size: 18px;">Heading 6</h6>
-        <div style="color: var(--sl-color-neutral-500); font-family: 'Nunito Sans', sans-serif;">18px</div>
+        <h3 style="font-size: 32px; margin-bottom: 1rem;">Heading 6 - 18px</h3>
+        <div style="display: flex; flex-direction: column; gap: 1rem;">
+          <div>
+            <h6 style="margin: 0; font-size: 18px; font-weight: 300;">Heading 6 Light</h6>
+            <div style="color: var(--sl-color-neutral-500); font-family: 'Nunito Sans', sans-serif;">font-weight: 300</div>
+          </div>
+          <div>
+            <h6 style="margin: 0; font-size: 18px; font-weight: 400;">Heading 6 Regular</h6>
+            <div style="color: var(--sl-color-neutral-500); font-family: 'Nunito Sans', sans-serif;">font-weight: 400</div>
+          </div>
+          <div>
+            <h6 style="margin: 0; font-size: 18px; font-weight: 600;">Heading 6 Semi-bold</h6>
+            <div style="color: var(--sl-color-neutral-500); font-family: 'Nunito Sans', sans-serif;">font-weight: 600</div>
+          </div>
+          <div>
+            <h6 style="margin: 0; font-size: 18px; font-weight: 700;">Heading 6 Bold</h6>
+            <div style="color: var(--sl-color-neutral-500); font-family: 'Nunito Sans', sans-serif;">font-weight: 700</div>
+          </div>
+        </div>
       </div>
     </div>
   `
