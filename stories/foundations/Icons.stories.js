@@ -62,9 +62,7 @@ export const CommonIcons = {
       grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
       gap: 1rem;
     ">
-      ${IconDisplay({ name: 'House', icon: houseIcon })}
       ${IconDisplay({ name: 'User', icon: userIcon })}
-      ${IconDisplay({ name: 'Settings', icon: cogIcon })}
       ${IconDisplay({ name: 'Bell', icon: bellIcon })}
       ${IconDisplay({ name: 'Email', icon: envelopeIcon })}
       ${IconDisplay({ name: 'Heart', icon: heartIcon })}
@@ -82,8 +80,8 @@ export const UsageExample = {
       <div>
         <h3 style="margin-bottom: 1rem;">Button with Icon</h3>
         <sl-button>
-          <img src=${houseIcon} alt="Home" style="width: 1em; height: 1em; margin-right: 0.5em;" />
-          Home
+          <img src=${userIcon} alt="User" style="width: 1em; height: 1em; margin-right: 0.5em;" />
+          Profile
         </sl-button>
       </div>
 
