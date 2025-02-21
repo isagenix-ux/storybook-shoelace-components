@@ -140,36 +140,46 @@ const meta = {
 
 export default meta;
 
-const IconDisplay = ({ name, icon }) => html`
-  <div style="
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem;
-    border: 1px solid var(--sl-color-neutral-200);
-    border-radius: 4px;
-  ">
+const IconDisplay = ({ name, icon }) => {
+  // Convert the filename to Font Awesome class name
+  const faClassName = `fa-light fa-${icon.split('/').pop().replace('.svg', '').split('.')[0]}`;
+  
+  return html`
     <div style="
-      width: 2rem;
-      height: 2rem;
       display: flex;
       align-items: center;
-      justify-content: center;
+      gap: 1rem;
+      padding: 1rem;
+      border: 1px solid var(--sl-color-neutral-200);
+      border-radius: 4px;
     ">
-      <img src=${icon} alt=${name} style="width: 1.5rem; height: 1.5rem;" />
-    </div>
-    <div style="
-      display: flex;
-      flex-direction: column;
-      gap: 0.25rem;
-    ">
-      <div style="font-weight: 600;">${name}</div>
-      <div style="color: var(--sl-color-neutral-500); font-family: 'Nunito Sans', sans-serif; font-size: 0.875rem;">
-        ${icon.split('/').pop().replace('.svg', '')}
+      <div style="
+        width: 2rem;
+        height: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      ">
+        <img src=${icon} alt=${name} style="width: 1.5rem; height: 1.5rem;" />
+      </div>
+      <div style="
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+      ">
+        <div style="font-weight: 600;">${name}</div>
+        <div style="
+          color: var(--sl-color-neutral-500); 
+          font-family: 'Nunito Sans', sans-serif; 
+          font-size: 0.875rem;
+          font-family: monospace;
+        ">
+          ${faClassName}
+        </div>
       </div>
     </div>
-  </div>
-`;
+  `;
+};
 
 const IconSection = ({ title, icons }) => html`
   <div style="margin-bottom: 2rem;">
