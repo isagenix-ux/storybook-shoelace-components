@@ -18,15 +18,6 @@ const config = {
   viteFinal: async (config) => {
     config.base = process.env.NODE_ENV === 'production' ? '/storybook-shoelace-components/' : '/';
     return config;
-  },
-  webpackFinal: async (config) => {
-    // Add SVG handling
-    config.module.rules.push({
-      test: /\.svg$/,
-      type: 'asset/resource'
-    });
-    
-    return config;
   }
 };
 
