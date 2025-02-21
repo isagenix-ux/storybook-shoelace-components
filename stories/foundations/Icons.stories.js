@@ -49,6 +49,14 @@ import linkIcon from '../assets/icons/link.svg';
 import listIcon from '../assets/icons/list.svg';
 import magnifyingGlassIcon from '../assets/icons/magnifying-glass.svg';
 import minusIcon from '../assets/icons/minus.svg';
+import plusIcon from '../assets/icons/plus.svg';
+import spinnerIcon from '../assets/icons/spinner.svg';
+import squareChevronUpIcon from '../assets/icons/square-chevron-up.svg';
+import starIcon from '../assets/icons/star.svg';
+import tagIcon from '../assets/icons/tag.svg';
+import trashIcon from '../assets/icons/trash.svg';
+import trashCanIcon from '../assets/icons/trash-can.svg';
+import xmarkIcon from '../assets/icons/xmark.svg';
 
 // Status Icons
 import circleCheckIcon from '../assets/icons/circle-check.svg';
@@ -59,6 +67,10 @@ import circlePlayIcon from '../assets/icons/circle-play.svg';
 import circlePlusIcon from '../assets/icons/circle-plus.svg';
 import arrowsRotateReverseIcon from '../assets/icons/arrows-rotate-reverse.svg';
 
+// Status & Alert Icons
+import triangleExclamationIcon from '../assets/icons/triangle-exclamation.svg';
+import shieldIcon from '../assets/icons/shield.svg';
+
 // Communication Icons
 import addressCardIcon from '../assets/icons/address-card.svg';
 import bellIcon from '../assets/icons/bell.svg';
@@ -67,6 +79,8 @@ import commentsIcon from '../assets/icons/comments.svg';
 import envelopeIcon from '../assets/icons/envelope.svg';
 import messageIcon from '../assets/icons/message.svg';
 import megaphoneIcon from '../assets/icons/megaphone.svg';
+import phoneIcon from '../assets/icons/phone.svg';
+import shareNodesIcon from '../assets/icons/share-nodes.svg';
 
 // Shopping Icons
 import basketShoppingSimpleIcon from '../assets/icons/basket-shopping-simple.svg';
@@ -94,6 +108,23 @@ import houseIcon from '../assets/icons/house.svg';
 import houseBlankIcon from '../assets/icons/house-blank.svg';
 import locationDotIcon from '../assets/icons/location-dot.svg';
 import locationPinIcon from '../assets/icons/location-pin.svg';
+
+// User Icons
+import userIcon from '../assets/icons/user.svg';
+import userLargeIcon from '../assets/icons/user-large.svg';
+import userPlusIcon from '../assets/icons/user-plus.svg';
+import userGroupIcon from '../assets/icons/user-group.svg';
+import usersIcon from '../assets/icons/users.svg';
+import peopleGroupIcon from '../assets/icons/people-group.svg';
+
+// Feedback Icons
+import thumbsUpIcon from '../assets/icons/thumbs-up.svg';
+import thumbsDownIcon from '../assets/icons/thumbs-down.svg';
+import playIcon from '../assets/icons/play.svg';
+
+// Network & Site Icons
+import networkWiredIcon from '../assets/icons/network-wired.svg';
+import sitemapIcon from '../assets/icons/sitemap.svg';
 
 const meta = {
   title: 'Foundations/Icons',
@@ -197,7 +228,7 @@ export const IconGallery = {
     })}
 
     ${IconSection({
-      title: 'Actions',
+      title: 'Interface',
       icons: html`
         ${IconDisplay({ name: 'Check', icon: checkIcon })}
         ${IconDisplay({ name: 'Copy', icon: copyIcon })}
@@ -206,6 +237,38 @@ export const IconGallery = {
         ${IconDisplay({ name: 'Settings', icon: gearIcon })}
         ${IconDisplay({ name: 'Filter', icon: filterIcon })}
         ${IconDisplay({ name: 'Search', icon: magnifyingGlassIcon })}
+        ${IconDisplay({ name: 'Plus', icon: plusIcon })}
+        ${IconDisplay({ name: 'Spinner', icon: spinnerIcon })}
+        ${IconDisplay({ name: 'Square Chevron Up', icon: squareChevronUpIcon })}
+        ${IconDisplay({ name: 'Star', icon: starIcon })}
+        ${IconDisplay({ name: 'Tag', icon: tagIcon })}
+        ${IconDisplay({ name: 'Trash', icon: trashIcon })}
+        ${IconDisplay({ name: 'Trash Can', icon: trashCanIcon })}
+        ${IconDisplay({ name: 'Close', icon: xmarkIcon })}
+      `
+    })}
+
+    ${IconSection({
+      title: 'Status & Alert',
+      icons: html`
+        ${IconDisplay({ name: 'Success', icon: circleCheckIcon })}
+        ${IconDisplay({ name: 'Info', icon: circleInfoIcon })}
+        ${IconDisplay({ name: 'Warning', icon: circleExclamationIcon })}
+        ${IconDisplay({ name: 'Play', icon: circlePlayIcon })}
+        ${IconDisplay({ name: 'Warning Triangle', icon: triangleExclamationIcon })}
+        ${IconDisplay({ name: 'Shield', icon: shieldIcon })}
+      `
+    })}
+
+    ${IconSection({
+      title: 'Users',
+      icons: html`
+        ${IconDisplay({ name: 'User', icon: userIcon })}
+        ${IconDisplay({ name: 'User Large', icon: userLargeIcon })}
+        ${IconDisplay({ name: 'User Plus', icon: userPlusIcon })}
+        ${IconDisplay({ name: 'User Group', icon: userGroupIcon })}
+        ${IconDisplay({ name: 'Users', icon: usersIcon })}
+        ${IconDisplay({ name: 'People Group', icon: peopleGroupIcon })}
       `
     })}
 
@@ -217,16 +280,25 @@ export const IconGallery = {
         ${IconDisplay({ name: 'Message', icon: messageIcon })}
         ${IconDisplay({ name: 'Megaphone', icon: megaphoneIcon })}
         ${IconDisplay({ name: 'Comments', icon: commentsIcon })}
+        ${IconDisplay({ name: 'Phone', icon: phoneIcon })}
+        ${IconDisplay({ name: 'Share', icon: shareNodesIcon })}
       `
     })}
 
     ${IconSection({
-      title: 'Status',
+      title: 'Feedback',
       icons: html`
-        ${IconDisplay({ name: 'Success', icon: circleCheckIcon })}
-        ${IconDisplay({ name: 'Info', icon: circleInfoIcon })}
-        ${IconDisplay({ name: 'Warning', icon: circleExclamationIcon })}
-        ${IconDisplay({ name: 'Play', icon: circlePlayIcon })}
+        ${IconDisplay({ name: 'Thumbs Up', icon: thumbsUpIcon })}
+        ${IconDisplay({ name: 'Thumbs Down', icon: thumbsDownIcon })}
+        ${IconDisplay({ name: 'Play', icon: playIcon })}
+      `
+    })}
+
+    ${IconSection({
+      title: 'Network & Site',
+      icons: html`
+        ${IconDisplay({ name: 'Network', icon: networkWiredIcon })}
+        ${IconDisplay({ name: 'Sitemap', icon: sitemapIcon })}
       `
     })}
   `
