@@ -1,20 +1,16 @@
 import { html } from 'lit';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faHouse, faUser, faCog, faBell, faEnvelope, faHeart, faStar, faCheck, faXmark, faCircleInfo } from '@fortawesome/pro-light-svg-icons';
 
-// Add icons to the library
-library.add(
-  faHouse,
-  faUser,
-  faCog,
-  faBell,
-  faEnvelope,
-  faHeart,
-  faStar,
-  faCheck,
-  faXmark,
-  faCircleInfo
-);
+// Import SVG icons
+import houseIcon from '../assets/icons/house.svg';
+import userIcon from '../assets/icons/user.svg';
+import cogIcon from '../assets/icons/cog.svg';
+import bellIcon from '../assets/icons/bell.svg';
+import envelopeIcon from '../assets/icons/envelope.svg';
+import heartIcon from '../assets/icons/heart.svg';
+import starIcon from '../assets/icons/star.svg';
+import checkIcon from '../assets/icons/check.svg';
+import xmarkIcon from '../assets/icons/xmark.svg';
+import circleInfoIcon from '../assets/icons/circle-info.svg';
 
 const meta = {
   title: 'Foundations/Icons',
@@ -30,7 +26,7 @@ const meta = {
 
 export default meta;
 
-const IconDisplay = ({ name, icon }) => html`
+const IconDisplay = ({ name, icon, className }) => html`
   <div style="
     display: flex;
     align-items: center;
@@ -46,7 +42,7 @@ const IconDisplay = ({ name, icon }) => html`
       align-items: center;
       justify-content: center;
     ">
-      <i class="fa-light ${icon}" style="font-size: 1.5rem;"></i>
+      <img src=${icon} alt=${name} class=${className || ''} style="width: 1.5rem; height: 1.5rem;" />
     </div>
     <div style="
       display: flex;
@@ -54,8 +50,8 @@ const IconDisplay = ({ name, icon }) => html`
       gap: 0.25rem;
     ">
       <div style="font-weight: 600;">${name}</div>
-      <div style="color: var(--sl-color-neutral-500); font-family: monospace; font-size: 0.875rem;">
-        ${icon}
+      <div style="color: var(--sl-color-neutral-500); font-family: 'Nunito Sans', sans-serif; font-size: 0.875rem;">
+        ${icon.split('/').pop().replace('.svg', '')}
       </div>
     </div>
   </div>
@@ -69,16 +65,16 @@ export const CommonIcons = {
       grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
       gap: 1rem;
     ">
-      ${IconDisplay({ name: 'House', icon: 'fa-house' })}
-      ${IconDisplay({ name: 'User', icon: 'fa-user' })}
-      ${IconDisplay({ name: 'Settings', icon: 'fa-cog' })}
-      ${IconDisplay({ name: 'Bell', icon: 'fa-bell' })}
-      ${IconDisplay({ name: 'Email', icon: 'fa-envelope' })}
-      ${IconDisplay({ name: 'Heart', icon: 'fa-heart' })}
-      ${IconDisplay({ name: 'Star', icon: 'fa-star' })}
-      ${IconDisplay({ name: 'Check', icon: 'fa-check' })}
-      ${IconDisplay({ name: 'Close', icon: 'fa-xmark' })}
-      ${IconDisplay({ name: 'Info', icon: 'fa-circle-info' })}
+      ${IconDisplay({ name: 'House', icon: houseIcon })}
+      ${IconDisplay({ name: 'User', icon: userIcon })}
+      ${IconDisplay({ name: 'Settings', icon: cogIcon })}
+      ${IconDisplay({ name: 'Bell', icon: bellIcon })}
+      ${IconDisplay({ name: 'Email', icon: envelopeIcon })}
+      ${IconDisplay({ name: 'Heart', icon: heartIcon })}
+      ${IconDisplay({ name: 'Star', icon: starIcon })}
+      ${IconDisplay({ name: 'Check', icon: checkIcon })}
+      ${IconDisplay({ name: 'Close', icon: xmarkIcon })}
+      ${IconDisplay({ name: 'Info', icon: circleInfoIcon })}
     </div>
   `
 };
@@ -90,7 +86,7 @@ export const UsageExample = {
       <div>
         <h3 style="margin-bottom: 1rem;">Button with Icon</h3>
         <sl-button>
-          <i class="fa-light fa-house"></i>
+          <img src=${houseIcon} alt="Home" style="width: 1em; height: 1em; margin-right: 0.5em;" />
           Home
         </sl-button>
       </div>
@@ -98,7 +94,7 @@ export const UsageExample = {
       <div>
         <h3 style="margin-bottom: 1rem;">Text with Icon</h3>
         <p>
-          <i class="fa-light fa-circle-info"></i>
+          <img src=${circleInfoIcon} alt="Info" style="width: 1em; height: 1em; margin-right: 0.5em;" />
           This is an informational message
         </p>
       </div>
@@ -106,10 +102,10 @@ export const UsageExample = {
       <div>
         <h3 style="margin-bottom: 1rem;">Icon Sizes</h3>
         <div style="display: flex; align-items: center; gap: 2rem;">
-          <i class="fa-light fa-star" style="font-size: 1rem;"></i>
-          <i class="fa-light fa-star" style="font-size: 1.5rem;"></i>
-          <i class="fa-light fa-star" style="font-size: 2rem;"></i>
-          <i class="fa-light fa-star" style="font-size: 2.5rem;"></i>
+          <img src=${starIcon} alt="Star" style="width: 1rem; height: 1rem;" />
+          <img src=${starIcon} alt="Star" style="width: 1.5rem; height: 1.5rem;" />
+          <img src=${starIcon} alt="Star" style="width: 2rem; height: 2rem;" />
+          <img src=${starIcon} alt="Star" style="width: 2.5rem; height: 2.5rem;" />
         </div>
       </div>
     </div>
