@@ -4,6 +4,9 @@ import { setBasePath } from '@shoelace-style/shoelace/dist/utilities/base-path';
 // Import Shoelace styles
 import '@shoelace-style/shoelace/dist/themes/light.css';
 
+// Add Font Awesome CSS
+import '@fortawesome/fontawesome-svg-core/styles.css';
+
 // Set the base path for Shoelace assets
 setBasePath('/shoelace');
 
