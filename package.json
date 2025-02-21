@@ -5,7 +5,8 @@
   "scripts": {
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "deploy": "npm run build-storybook && git add . && git commit -m \"Deploy Storybook updates\" && git push origin main"
+    "deploy": "npm run build-storybook && git add . && git commit -m \"Deploy Storybook updates\" && git push origin main",
+    "copy-icons": "node scripts/copy-icons.js"
   },
   "dependencies": {
     "@fontsource/nunito-sans": "^5.1.1",
