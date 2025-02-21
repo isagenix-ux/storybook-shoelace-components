@@ -6,7 +6,6 @@ import bellIcon from '../assets/icons/bell.svg';
 import envelopeIcon from '../assets/icons/envelope.svg';
 import heartIcon from '../assets/icons/heart.svg';
 import starIcon from '../assets/icons/star.svg';
-import checkIcon from '../assets/icons/check.svg';
 import xmarkIcon from '../assets/icons/xmark.svg';
 import infoIcon from '../assets/icons/circle-info.svg';
 
@@ -67,7 +66,6 @@ export const CommonIcons = {
       ${IconDisplay({ name: 'Email', icon: envelopeIcon })}
       ${IconDisplay({ name: 'Heart', icon: heartIcon })}
       ${IconDisplay({ name: 'Star', icon: starIcon })}
-      ${IconDisplay({ name: 'Check', icon: checkIcon })}
       ${IconDisplay({ name: 'Close', icon: xmarkIcon })}
       ${IconDisplay({ name: 'Info', icon: infoIcon })}
     </div>
