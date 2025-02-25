@@ -43,4 +43,21 @@ export const styles = `
   --turquoise-700: #0C5F6F;
   --turquoise-800: #0C5F6F;
   --turquoise-900: #003038;
-}`; 
+
+  /* Bootstrap 4.5 Custom Controls Override */
+  .custom-control-input:checked ~ .custom-control-label::before {
+    border-color: var(--turquoise-500);
+    background-color: var(--turquoise-500);
+  }
+
+  .custom-control-input:focus ~ .custom-control-label::before {
+    box-shadow: 0 0 0 0.2rem rgba(0, 119, 139, 0.25);
+    border-color: var(--turquoise-500);
+  }
+
+  .custom-control-input:not(:disabled):active ~ .custom-control-label::before {
+    background-color: var(--turquoise-700);
+    border-color: var(--turquoise-700);
+  }
+}
+`; 

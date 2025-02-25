@@ -3,19 +3,23 @@ import { html } from 'lit';
 const meta = {
   title: 'Bootstrap/Navigation/Breadcrumb',
   tags: ['autodocs'],
+  component: 'nav',
   render: (args) => html`
+    <style>
+      .breadcrumb-item a {
+        color: var(--turquoise-500);
+      }
+      .breadcrumb-item a:hover {
+        color: var(--turquoise-700);
+        text-decoration: none;
+      }
+    </style>
     <nav aria-label="breadcrumb">
-      <ol class="breadcrumb ${args.divider === 'arrows' ? 'breadcrumb-arrows' : ''}">
+      <ol class="breadcrumb">
         ${args.items.map((item, index) => html`
-          <li 
-            class="breadcrumb-item ${item.active ? 'active' : ''}" 
-            ${item.active ? 'aria-current="page"' : ''}
-          >
-            ${item.active ? html`
-              ${item.text}
-            ` : html`
-              <a href=${item.href}>${item.text}</a>
-            `}
+          <li class="breadcrumb-item ${index === args.items.length - 1 ? 'active' : ''}" 
+              ${index === args.items.length - 1 ? 'aria-current="page"' : ''}>
+            ${index === args.items.length - 1 ? item : html`<a href="#">${item}</a>`}
           </li>
         `)}
       </ol>
@@ -23,114 +27,37 @@ const meta = {
   `,
   argTypes: {
     items: {
-      control: 'object',
-      description: 'Array of breadcrumb items with text, href, and active properties'
-    },
-    divider: {
-      control: 'select',
-      options: ['default', 'arrows'],
-      description: 'Style of the divider between items'
+      control: 'array',
+      description: 'Array of breadcrumb items'
     }
   }
 };
 
 export default meta;
 
-// Basic Breadcrumb
-export const Basic = {
+export const Default = {
   args: {
-    items: [
-      { text: 'Home', href: '#' },
-      { text: 'Library', href: '#' },
-      { text: 'Data', active: true }
-    ]
+    items: ['Home', 'Library', 'Data']
   }
 };
 
-// With Custom Divider
-export const CustomDivider = {
-  render: () => html`
-    <style>
-      .breadcrumb-custom-divider .breadcrumb-item + .breadcrumb-item::before {
-        content: ">";
-      }
-    </style>
-    <nav aria-label="breadcrumb">
-      <ol class="breadcrumb breadcrumb-custom-divider">
-        <li class="breadcrumb-item"><a href="#">Home</a></li>
-        <li class="breadcrumb-item"><a href="#">Library</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Data</li>
-      </ol>
-    </nav>
-  `
-};
-
-// With Arrows
-export const WithArrows = {
-  render: () => html`
-    <style>
-      .breadcrumb-arrows .breadcrumb-item + .breadcrumb-item::before {
-        content: "→";
-      }
-    </style>
-    <nav aria-label="breadcrumb">
-      <ol class="breadcrumb breadcrumb-arrows">
-        <li class="breadcrumb-item"><a href="#">Home</a></li>
-        <li class="breadcrumb-item"><a href="#">Library</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Data</li>
-      </ol>
-    </nav>
-  `
-};
-
-// With Icons
 export const WithIcons = {
   render: () => html`
+    <style>
+      .breadcrumb-item a {
+        color: var(--turquoise-500);
+      }
+      .breadcrumb-item a:hover {
+        color: var(--turquoise-700);
+        text-decoration: none;
+      }
+    </style>
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item">
-          <a href="#" class="d-flex align-items-center">
-            <i class="bi bi-house-door me-1"></i>
-            Home
-          </a>
-        </li>
-        <li class="breadcrumb-item">
-          <a href="#" class="d-flex align-items-center">
-            <i class="bi bi-book me-1"></i>
-            Library
-          </a>
-        </li>
-        <li class="breadcrumb-item active" aria-current="page">
-          <i class="bi bi-file-text me-1"></i>
-          Data
-        </li>
+        <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i> Home</a></li>
+        <li class="breadcrumb-item"><a href="#"><i class="fas fa-book"></i> Library</a></li>
+        <li class="breadcrumb-item active" aria-current="page"><i class="fas fa-database"></i> Data</li>
       </ol>
     </nav>
   `
-};
-
-// Dark Background
-export const DarkBackground = {
-  render: () => html`
-    <nav aria-label="breadcrumb" style="background-color: #343a40; padding: 0.75rem;">
-      <ol class="breadcrumb mb-0">
-        <li class="breadcrumb-item"><a href="#" class="text-light">Home</a></li>
-        <li class="breadcrumb-item"><a href="#" class="text-light">Library</a></li>
-        <li class="breadcrumb-item active text-light" aria-current="page">Data</li>
-      </ol>
-    </nav>
-  `
-};
-
-// Multiple Levels
-export const MultipleLevels = {
-  args: {
-    items: [
-      { text: 'Home', href: '#' },
-      { text: 'Library', href: '#' },
-      { text: 'Data', href: '#' },
-      { text: 'Analysis', href: '#' },
-      { text: 'Results', active: true }
-    ]
-  }
 }; 

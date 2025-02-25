@@ -21,7 +21,13 @@ const preview = {
         date: /Date$/i,
       },
     },
-    layout: 'centered',
+    layout: 'padded',
+    docs: {
+      story: {
+        height: '300px',
+        scrollable: true
+      }
+    }
   },
   decorators: [
     (story) => {
@@ -51,7 +57,7 @@ const preview = {
       });
 
       return html`
-        <div class="story-wrapper">
+        <div class="story-wrapper" style="padding: 1rem; overflow-y: auto;">
           ${story()}
         </div>
       `;
