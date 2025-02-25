@@ -23,6 +23,13 @@ const config = {
       type: 'asset/resource'
     });
     
+    config.plugins.push(
+      new webpack.ProvidePlugin({
+        $: 'jquery',
+        jQuery: 'jquery'
+      })
+    );
+    
     return config;
   }
 };

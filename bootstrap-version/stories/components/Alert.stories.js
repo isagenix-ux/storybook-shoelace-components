@@ -48,8 +48,8 @@ const meta = {
       role="alert"
     >
       ${args.dismissible ? html`
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
+        <button type="button" class="close" data-dismiss="alert">
+          <span>&times;</span>
         </button>
       ` : ''}
       ${args.heading ? html`<h4 class="alert-heading">${args.heading}</h4>` : ''}

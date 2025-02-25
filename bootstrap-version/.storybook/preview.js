@@ -1,6 +1,6 @@
 import { html } from 'lit';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import * as bootstrap from 'bootstrap';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import '../stories/foundations/colors.css';
 
 /** @type { import('@storybook/web-components').Preview } */
@@ -23,7 +23,7 @@ const preview = {
         document.querySelectorAll('.modal-backdrop').forEach(el => el.remove());
         const existingModals = document.querySelectorAll('.modal');
         existingModals.forEach(modal => {
-          const modalInstance = bootstrap.Modal.getInstance(modal);
+          const modalInstance = $(modal).data('bs.modal');
           if (modalInstance) {
             modalInstance.dispose();
           }
@@ -31,24 +31,15 @@ const preview = {
 
         // Initialize new modals
         const modals = document.querySelectorAll('.modal');
-        modals.forEach(modal => {
-          new bootstrap.Modal(modal);
-        });
+        modals.forEach(modal => $(modal).modal());
 
         // Initialize tooltips
-        const tooltips = document.querySelectorAll('[data-bs-toggle="tooltip"]');
-        tooltips.forEach(tooltip => new bootstrap.Tooltip(tooltip));
+        const tooltips = document.querySelectorAll('[data-toggle="tooltip"]');
+        $(tooltips).tooltip();
 
         // Initialize toasts
         const toasts = document.querySelectorAll('.toast');
-        toasts.forEach(toastEl => {
-          const toast = new bootstrap.Toast(toastEl, {
-            animation: true,
-            autohide: true,
-            delay: 5000
-          });
-          toast.show();
-        });
+        $(toasts).toast('show');
       });
 
       return html`

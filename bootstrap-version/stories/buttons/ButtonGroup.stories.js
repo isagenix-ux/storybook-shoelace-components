@@ -4,6 +4,19 @@ const meta = {
   title: 'Bootstrap/Buttons/Button Group',
   tags: ['autodocs'],
   render: (args) => html`
+    <style>
+      .btn {
+        text-transform: uppercase;
+      }
+      .btn-primary {
+        background-color: var(--turquoise-500);
+        border-color: var(--turquoise-500);
+      }
+      .btn-primary:hover {
+        background-color: var(--turquoise-700);
+        border-color: var(--turquoise-700);
+      }
+    </style>
     <div class="btn-group" role="group" aria-label="Basic example">
       ${args.buttons.map(label => html`
         <button type="button" class="btn btn-${args.variant || 'primary'}">${label}</button>
@@ -36,14 +49,27 @@ export const Basic = {
 // Toolbar example
 export const Toolbar = {
   render: () => html`
+    <style>
+      .btn {
+        text-transform: uppercase;
+      }
+      .btn-primary {
+        background-color: var(--turquoise-500);
+        border-color: var(--turquoise-500);
+      }
+      .btn-primary:hover {
+        background-color: var(--turquoise-700);
+        border-color: var(--turquoise-700);
+      }
+    </style>
     <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-      <div class="btn-group me-2" role="group" aria-label="First group">
+      <div class="btn-group mr-2" role="group" aria-label="First group">
         <button type="button" class="btn btn-primary">1</button>
         <button type="button" class="btn btn-primary">2</button>
         <button type="button" class="btn btn-primary">3</button>
         <button type="button" class="btn btn-primary">4</button>
       </div>
-      <div class="btn-group me-2" role="group" aria-label="Second group">
+      <div class="btn-group mr-2" role="group" aria-label="Second group">
         <button type="button" class="btn btn-secondary">5</button>
         <button type="button" class="btn btn-secondary">6</button>
         <button type="button" class="btn btn-secondary">7</button>
@@ -58,6 +84,19 @@ export const Toolbar = {
 // Sizing
 export const Sizes = {
   render: () => html`
+    <style>
+      .btn {
+        text-transform: uppercase;
+      }
+      .btn-primary {
+        background-color: var(--turquoise-500);
+        border-color: var(--turquoise-500);
+      }
+      .btn-primary:hover {
+        background-color: var(--turquoise-700);
+        border-color: var(--turquoise-700);
+      }
+    </style>
     <div style="display: flex; flex-direction: column; gap: 1rem;">
       <div class="btn-group btn-group-lg" role="group" aria-label="Large button group">
         <button type="button" class="btn btn-primary">Left</button>
@@ -83,6 +122,19 @@ export const Sizes = {
 // Vertical variation
 export const Vertical = {
   render: () => html`
+    <style>
+      .btn {
+        text-transform: uppercase;
+      }
+      .btn-primary {
+        background-color: var(--turquoise-500);
+        border-color: var(--turquoise-500);
+      }
+      .btn-primary:hover {
+        background-color: var(--turquoise-700);
+        border-color: var(--turquoise-700);
+      }
+    </style>
     <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
       <button type="button" class="btn btn-primary">Button</button>
       <button type="button" class="btn btn-primary">Button</button>
