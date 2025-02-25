@@ -1,7 +1,15 @@
 import { html } from 'lit';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import '../node_modules/bootstrap/dist/css/bootstrap.css';
+import $ from 'jquery';
+import 'popper.js';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import '../stories/foundations/colors.css';
+import { styles as colorStyles } from '../stories/foundations/colors.js';
+
+window.jQuery = window.$ = $;
+
+const styleElement = document.createElement('style');
+styleElement.textContent = colorStyles;
+document.head.appendChild(styleElement);
 
 /** @type { import('@storybook/web-components').Preview } */
 const preview = {

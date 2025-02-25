@@ -3,65 +3,51 @@ import { html } from 'lit';
 const meta = {
   title: 'Bootstrap/Forms/Checkbox',
   tags: ['autodocs'],
+  component: 'div',
   render: (args) => html`
-    <div class="mb-3">
-      <div class="form-check">
-        <input 
-          type="checkbox"
-          class="form-check-input ${args.isValid ? 'is-valid' : ''} ${args.isInvalid ? 'is-invalid' : ''}"
-          ?checked=${args.checked}
-          ?disabled=${args.disabled}
-          ?indeterminate=${args.indeterminate}
-          id="checkbox1"
-        />
-        <label class="form-check-label" for="checkbox1">
-          ${args.label}
-        </label>
-        ${args.helpText ? html`
-          <div class="form-text">${args.helpText}</div>
-        ` : ''}
-        ${args.isValid ? html`
-          <div class="valid-feedback">Looks good!</div>
-        ` : ''}
-        ${args.isInvalid ? html`
-          <div class="invalid-feedback">Please check this checkbox.</div>
-        ` : ''}
-      </div>
+    <div class="custom-control custom-checkbox">
+      <input 
+        type="checkbox" 
+        class="custom-control-input" 
+        id="customCheck1"
+        ?checked=${args.checked}
+        ?disabled=${args.disabled}
+      >
+      <label class="custom-control-label" for="customCheck1">${args.label}</label>
     </div>
   `,
   argTypes: {
-    label: {
-      control: 'text',
-      description: 'Checkbox label'
-    },
-    checked: {
-      control: 'boolean',
-      description: 'Checked state'
-    },
-    disabled: {
-      control: 'boolean',
-      description: 'Disabled state'
-    },
-    indeterminate: {
-      control: 'boolean',
-      description: 'Indeterminate state'
-    },
-    helpText: {
-      control: 'text',
-      description: 'Help text below the checkbox'
-    },
-    isValid: {
-      control: 'boolean',
-      description: 'Valid state'
-    },
-    isInvalid: {
-      control: 'boolean',
-      description: 'Invalid state'
-    }
+    label: { control: 'text' },
+    checked: { control: 'boolean' },
+    disabled: { control: 'boolean' }
   }
 };
 
 export default meta;
+
+export const Default = {
+  args: {
+    label: 'Default checkbox',
+    checked: false,
+    disabled: false
+  }
+};
+
+export const Checked = {
+  args: {
+    label: 'Checked checkbox',
+    checked: true,
+    disabled: false
+  }
+};
+
+export const Disabled = {
+  args: {
+    label: 'Disabled checkbox',
+    checked: false,
+    disabled: true
+  }
+};
 
 // Basic checkbox
 export const Basic = {

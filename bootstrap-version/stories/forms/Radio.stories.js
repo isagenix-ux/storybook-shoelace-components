@@ -3,62 +3,52 @@ import { html } from 'lit';
 const meta = {
   title: 'Bootstrap/Forms/Radio',
   tags: ['autodocs'],
+  component: 'div',
   render: (args) => html`
-    <div class="mb-3">
-      ${args.options.map((option, index) => html`
-        <div class="form-check">
-          <input
-            type="radio"
-            class="form-check-input ${args.isValid ? 'is-valid' : ''} ${args.isInvalid ? 'is-invalid' : ''}"
-            name="radioGroup"
-            id="radio${index}"
-            value=${option.value}
-            ?checked=${option.checked}
-            ?disabled=${option.disabled || args.disabled}
-          />
-          <label class="form-check-label" for="radio${index}">
-            ${option.label}
-          </label>
-          ${index === args.options.length - 1 ? html`
-            ${args.helpText ? html`
-              <div class="form-text">${args.helpText}</div>
-            ` : ''}
-            ${args.isValid ? html`
-              <div class="valid-feedback">Looks good!</div>
-            ` : ''}
-            ${args.isInvalid ? html`
-              <div class="invalid-feedback">Please select an option.</div>
-            ` : ''}
-          ` : ''}
-        </div>
-      `)}
+    <div class="custom-control custom-radio">
+      <input 
+        type="radio" 
+        class="custom-control-input" 
+        id="customRadio1"
+        name="customRadio"
+        ?checked=${args.checked}
+        ?disabled=${args.disabled}
+      >
+      <label class="custom-control-label" for="customRadio1">${args.label}</label>
     </div>
   `,
   argTypes: {
-    options: {
-      control: 'object',
-      description: 'Array of radio options with value, label, checked, and disabled properties'
-    },
-    disabled: {
-      control: 'boolean',
-      description: 'Disable all radio buttons'
-    },
-    helpText: {
-      control: 'text',
-      description: 'Help text below the radio group'
-    },
-    isValid: {
-      control: 'boolean',
-      description: 'Valid state'
-    },
-    isInvalid: {
-      control: 'boolean',
-      description: 'Invalid state'
-    }
+    label: { control: 'text' },
+    checked: { control: 'boolean' },
+    disabled: { control: 'boolean' }
   }
 };
 
 export default meta;
+
+export const Default = {
+  args: {
+    label: 'Default radio',
+    checked: false,
+    disabled: false
+  }
+};
+
+export const Checked = {
+  args: {
+    label: 'Checked radio',
+    checked: true,
+    disabled: false
+  }
+};
+
+export const Disabled = {
+  args: {
+    label: 'Disabled radio',
+    checked: false,
+    disabled: true
+  }
+};
 
 // Basic radio
 export const Basic = {

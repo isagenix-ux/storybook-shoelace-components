@@ -21,6 +21,9 @@
     "@storybook/test": "^8.5.8",
     "@storybook/web-components": "^8.5.8",
     "@storybook/web-components-webpack5": "^8.5.8",
-    "storybook": "^8.5.8"
+    "webpack": "^5.0.0",
+    "storybook": "^8.5.8",
+    "style-loader": "^3.3.3",
+    "css-loader": "^6.8.1"
   }
 } 

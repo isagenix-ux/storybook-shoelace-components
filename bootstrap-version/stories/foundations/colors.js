@@ -1,3 +1,4 @@
+export const styles = `
 :root {
   /* Bootstrap Base Colors */
   --bs-blue: #00778B;  /* Set to turquoise-500 */
@@ -42,4 +43,4 @@
   --turquoise-700: #0C5F6F;
   --turquoise-800: #0C5F6F;
   --turquoise-900: #003038;
-} 
+}`; 

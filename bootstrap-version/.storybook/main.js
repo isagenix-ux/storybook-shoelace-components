@@ -1,3 +1,5 @@
+const webpack = require('webpack');
+
 /** @type { import('@storybook/web-components-webpack5').StorybookConfig } */
 const config = {
   stories: [
@@ -12,23 +14,16 @@ const config = {
   docs: {
     autodocs: 'tag',
   },
-  viteFinal: async (config) => {
-    config.base = process.env.NODE_ENV === 'production' ? '/storybook-shoelace-components/' : '/';
-    return config;
-  },
   webpackFinal: async (config) => {
-    // Add SVG handling
-    config.module.rules.push({
-      test: /\.svg$/,
-      type: 'asset/resource'
-    });
-    
-    config.plugins.push(
+    config.plugins = [
+      ...(config.plugins || []),
       new webpack.ProvidePlugin({
         $: 'jquery',
-        jQuery: 'jquery'
+        jQuery: 'jquery',
+        'window.jQuery': 'jquery',
+        Popper: ['popper.js', 'default']
       })
-    );
+    ];
     
     return config;
   }
