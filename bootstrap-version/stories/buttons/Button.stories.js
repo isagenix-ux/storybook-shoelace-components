@@ -3,10 +3,54 @@ import { html } from 'lit';
 const meta = {
   title: 'Bootstrap/Buttons/Button',
   tags: ['autodocs'],
+  component: 'button',
   render: (args) => html`
+    <style>
+      .btn {
+        text-transform: uppercase;
+      }
+      .btn-primary {
+        background-color: var(--turquoise-500);
+        border-color: var(--turquoise-500);
+      }
+      .btn-primary:hover {
+        background-color: var(--turquoise-700);
+        border-color: var(--turquoise-700);
+      }
+      .btn-text {
+        color: var(--turquoise-500);
+        background: none;
+        border: none;
+        padding: 0.375rem 0.75rem;
+      }
+      .btn-text:hover {
+        color: var(--turquoise-700);
+      }
+      .btn-secondary {
+        background-color: white;
+        color: var(--granite-800);
+        border-color: var(--granite-800);
+      }
+      .btn-secondary:hover {
+        background-color: var(--granite-100);
+        color: var(--granite-800);
+        border-color: var(--granite-800);
+      }
+      .btn-lg {
+        padding: 0.5rem 1rem;
+        font-size: 1.25rem;
+      }
+      .btn-sm {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.875rem;
+      }
+    </style>
     <button 
-      class="btn ${args.variant ? `btn-${args.variant}` : 'btn-primary'} ${args.size ? `btn-${args.size}` : ''}"
-      ?disabled=${args.disabled}
+      type="button" 
+      class="btn ${args.variant === 'Primary' ? 'btn-primary' : 
+                  args.variant === 'Secondary' ? 'btn-outline-secondary btn-secondary' : 
+                  'btn-text'} ${args.size === 'large' ? 'btn-lg' : 
+                               args.size === 'small' ? 'btn-sm' : ''}"
     >
       ${args.label}
     </button>
@@ -14,98 +58,153 @@ const meta = {
   argTypes: {
     variant: {
       control: 'select',
-      options: ['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'light', 'dark', 'link', 'outline-primary', 'outline-secondary'],
-      description: 'The button\'s variant.',
-      table: {
-        type: { summary: 'string' },
-        defaultValue: { summary: 'primary' }
-      }
+      options: ['Primary', 'Secondary', 'Text'],
+      description: 'Button variant'
     },
     size: {
       control: 'select',
-      options: ['sm', 'md', 'lg'],
-      description: 'The button\'s size.',
-      table: {
-        type: { summary: 'string' },
-        defaultValue: { summary: 'md' }
-      }
-    },
-    disabled: { 
-      control: 'boolean',
-      description: 'Makes the button disabled.',
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: false }
-      }
+      options: ['small', 'medium', 'large'],
+      description: 'Button size'
     },
     label: { 
       control: 'text',
-      description: 'The button\'s label.',
-      table: {
-        type: { summary: 'string' }
-      }
+      description: 'Button text (will be displayed in uppercase)'
     }
   }
 };
 
 export default meta;
 
-// Basic button with args
-export const Basic = {
+// Size Variants
+export const Large = {
   args: {
-    variant: 'primary',
-    size: 'md',
-    label: 'Button',
-    disabled: false
+    variant: 'Primary',
+    size: 'large',
+    label: 'Large Button'
   }
 };
 
-// Variants
-export const Variants = {
+export const Medium = {
+  args: {
+    variant: 'Primary',
+    size: 'medium',
+    label: 'Medium Button'
+  }
+};
+
+export const Small = {
+  args: {
+    variant: 'Primary',
+    size: 'small',
+    label: 'Small Button'
+  }
+};
+
+// All Sizes
+export const AllSizes = {
   render: () => html`
-    <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
-      <button class="btn btn-primary">Primary</button>
-      <button class="btn btn-secondary">Secondary</button>
-      <button class="btn btn-success">Success</button>
-      <button class="btn btn-danger">Danger</button>
-      <button class="btn btn-warning">Warning</button>
-      <button class="btn btn-info">Info</button>
+    <style>
+      .btn {
+        text-transform: uppercase;
+      }
+      .btn-primary {
+        background-color: var(--turquoise-500);
+        border-color: var(--turquoise-500);
+      }
+      .btn-primary:hover {
+        background-color: var(--turquoise-700);
+        border-color: var(--turquoise-700);
+      }
+      .btn-lg {
+        padding: 0.5rem 1rem;
+        font-size: 1.25rem;
+      }
+      .btn-sm {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.875rem;
+      }
+      .button-container {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+    </style>
+    <div class="button-container">
+      <button type="button" class="btn btn-primary btn-lg">Large Button</button>
+      <button type="button" class="btn btn-primary">Medium Button</button>
+      <button type="button" class="btn btn-primary btn-sm">Small Button</button>
     </div>
   `
 };
 
-// Outline Variants
-export const OutlineVariants = {
-  render: () => html`
-    <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
-      <button class="btn btn-outline-primary">Primary</button>
-      <button class="btn btn-outline-secondary">Secondary</button>
-      <button class="btn btn-outline-success">Success</button>
-      <button class="btn btn-outline-danger">Danger</button>
-      <button class="btn btn-outline-warning">Warning</button>
-      <button class="btn btn-outline-info">Info</button>
-    </div>
-  `
+// Keep existing variant stories
+export const Primary = {
+  args: {
+    variant: 'Primary',
+    size: 'medium',
+    label: 'Primary Button'
+  }
 };
 
-// Sizes
-export const Sizes = {
-  render: () => html`
-    <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
-      <button class="btn btn-primary btn-sm">Small</button>
-      <button class="btn btn-primary">Medium</button>
-      <button class="btn btn-primary btn-lg">Large</button>
-    </div>
-  `
+export const Secondary = {
+  args: {
+    variant: 'Secondary',
+    size: 'medium',
+    label: 'Secondary Button'
+  }
 };
 
-// Disabled
-export const Disabled = {
+export const Text = {
+  args: {
+    variant: 'Text',
+    size: 'medium',
+    label: 'Text Button'
+  }
+};
+
+// All Variants
+export const AllVariants = {
   render: () => html`
-    <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
-      <button class="btn btn-primary" disabled>Primary</button>
-      <button class="btn btn-secondary" disabled>Secondary</button>
-      <button class="btn btn-link" disabled>Link</button>
+    <style>
+      .btn {
+        text-transform: uppercase;
+      }
+      .btn-primary {
+        background-color: var(--turquoise-500);
+        border-color: var(--turquoise-500);
+      }
+      .btn-primary:hover {
+        background-color: var(--turquoise-700);
+        border-color: var(--turquoise-700);
+      }
+      .btn-text {
+        color: var(--turquoise-500);
+        background: none;
+        border: none;
+        padding: 0.375rem 0.75rem;
+      }
+      .btn-text:hover {
+        color: var(--turquoise-700);
+      }
+      .btn-secondary {
+        background-color: white;
+        color: var(--granite-800);
+        border-color: var(--granite-800);
+      }
+      .btn-secondary:hover {
+        background-color: var(--granite-100);
+        color: var(--granite-800);
+        border-color: var(--granite-800);
+      }
+      .button-container {
+        display: flex;
+        gap: 1rem;
+      }
+    </style>
+    <div class="button-container">
+      <button type="button" class="btn btn-primary">Primary Button</button>
+      <button type="button" class="btn btn-outline-secondary btn-secondary">Secondary Button</button>
+      <button type="button" class="btn btn-text">Text Button</button>
     </div>
   `
 }; 

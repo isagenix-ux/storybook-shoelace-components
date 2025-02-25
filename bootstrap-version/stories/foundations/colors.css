@@ -1,0 +1,36 @@
+:root {
+  /* Theme Colors */
+  --bs-primary: #00778B;
+  --bs-success: #62a752;
+  --bs-warning: #edab3a;
+  --bs-error: #a0272b;
+
+  /* Grays */
+  --bs-gray-100: #f8f9fa;
+  --bs-gray-200: #e9ecef;
+  --bs-gray-300: #dee2e6;
+  --bs-gray-400: #ced4da;
+  --bs-gray-500: #adb5bd;
+  --bs-gray-600: #6c757d;
+  --bs-gray-700: #495057;
+  --bs-gray-800: #343a40;
+  --bs-gray-900: #212529;
+
+  /* Granite Scale */
+  --granite-100: #F6F6F6;
+  --granite-200: #EDEEEE;
+  --granite-500: #D4D5D5;
+  --granite-700: #727677;
+  --granite-800: #54585A;
+  --granite-900: #303030;
+
+  /* Turquoise Scale */
+  --turquoise-100: #F2F8F9;
+  --turquoise-150: #E0EEF1;
+  --turquoise-200: #BFDDE2;
+  --turquoise-300: #4099A8;
+  --turquoise-500: #00778B;
+  --turquoise-700: #0C5F6F;
+  --turquoise-800: #0C5F6F;
+  --turquoise-900: #003038;
+} 

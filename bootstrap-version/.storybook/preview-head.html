@@ -1,0 +1,46 @@
+<style>
+  /* Fix for modal display in Storybook */
+  .sb-show-main {
+    transition: none !important;
+  }
+
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+  }
+
+  .modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99998;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+  }
+
+  /* Ensure modals appear above Storybook UI */
+  #storybook-root {
+    position: relative;
+    z-index: auto !important;
+  }
+
+  .modal-dialog {
+    z-index: 99999;
+  }
+
+  /* Additional styles for docs view */
+  .sbdocs-wrapper .modal {
+    z-index: 99999;
+  }
+
+  .sbdocs-wrapper .modal-backdrop {
+    z-index: 99998;
+  }
+
+  .sbdocs-wrapper .modal-dialog {
+    z-index: 99999;
+  }
+</style> 
